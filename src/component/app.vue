@@ -1,0 +1,309 @@
+<template>
+	<div>
+		<SideBar></SideBar>
+		<div :style="[ContentMargin]">
+			<md-progress md-indeterminate class="md-accent" v-if="IsProgressVisible"></md-progress>
+			<div class="content-div">
+				<transition name="md-router" appear>
+					<router-view></router-view>
+				</transition>
+			</div>
+		</div>
+		
+	</div>
+</template>
+
+
+<script>
+import SideBar from './sideBar.vue';
+import { deviceType } from '../helper/enum/deviceType.js'
+
+
+export default {
+	beforeMount() {
+		let width = window.innerWidth;
+		this.setDeviceType(width);
+		window.onresize = (e) => {
+			width = e.target.innerWidth || 900;
+			this.setDeviceType(width);
+		};
+	},
+
+	mounted() {
+		if (this.IsLoginPage || this.DeviceType == deviceType.PHONE) {
+			this.$store.dispatch('setSidebarMargin', 0);
+		} else {
+			this.$store.dispatch('setSidebarMargin', 0);
+		}
+	},
+
+	beforeDestroy() {
+
+	},
+	destroyed() {
+
+	},
+	components: {
+		SideBar
+	},
+	computed: {
+		SideBarMargin() {
+			return { 'margin-left': `${this.$store.getters.appSideBarMargin}px` };
+		},
+		DeviceType() {
+			return this.$store.getters.appDeviceType;
+		},
+		IsProgressVisible() {
+			return this.$store.getters.appIsProgressVisible;
+		},
+		ContentMargin() {
+			return { 'margin-left': `${this.$store.getters.appContentMargin}px` };
+		},
+		IsLoginPage() {
+			return this.$store.getters.appCurrentRoute == '/login' ? true : false;
+		}
+	},
+	methods: {
+		setDeviceType(width) {
+			if (width < 600) {
+				this.$store.dispatch('setDeviceType', deviceType.PHONE);
+			} else if (width > 600 && width < 900) {
+				this.$store.dispatch('setDeviceType', deviceType.TABLET);
+			} else {
+				this.$store.dispatch('setDeviceType', deviceType.DESKTOP);
+			}
+		}
+	}
+}
+</script>
+
+<style>
+body {
+	background: #efefef;
+	font-family: 'Dosis', sans-serif;
+	font-size: 20px;
+	line-height: 1.42857;
+}
+
+.content-div {
+	padding: 0px 0px 0px 0px;
+	max-width: 1500px;
+	margin: auto;
+}
+
+.divider {
+	position: relative;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin-top: 10px;
+	font-size: 14px;
+	line-height: 1.5;
+	color: #EAECEF;
+	border-top: 1px solid #EAECEF;
+}
+
+.footer {
+	display: flex;
+	flex: 1;
+}
+
+.left-sidenav-container .md-theme-default.md-toolbar {
+	background-color: #FFFFFF;
+	color: #282828;
+}
+
+.md-theme-default.md-toolbar.admin-toolbar {
+	position: fixed;
+	z-index: 1500;
+	left: 0;
+	right: 0;
+	top: 0;
+	padding: 0px
+}
+
+.top-fixed-bar {
+	background: #607D8D;
+	color: #FFFFFF;
+	padding-left: 10px;
+}
+
+.md-sidenav-backdrop {
+	display: none;
+}
+
+.md-sidenav.md-active .md-sidenav-content {
+	box-shadow: 0 0px 10px -5px rgba(0, 0, 0, 0.2), 0 10px 11px 0px rgba(0, 0, 0, 0.14), 0 6px 0px -2px rgba(0, 0, 0, 0.12);
+}
+
+.md-theme-default.md-list .md-list-item-expand .md-list-item-container {
+	background: none!important;
+}
+
+.md-sidenav-content {
+	position: fixed!important;
+	z-index: 2000!important;
+}
+
+.base-div {
+	display: flex;
+	flex: 1;
+	flex-direction: column;
+}
+
+.dashboard-card {
+	margin-top: .5em;
+	margin-bottom: .5em;
+}
+
+.md-toolbar.md-theme-default {
+	border-bottom: 0.5px solid rgba(0, 0, 0, 0.12)!important;
+	height: 63.50px;
+}
+
+
+.top-left {
+	padding-left: 10px;
+}
+
+.md-toolbar-container img {
+	height: 51px;
+	padding-left: 0px;
+}
+
+.md-card-actions .md-button {
+	background-color: rgba(153, 153, 153, 0.2);
+}
+
+.md-card {
+	width: 400px;
+	height: auto;
+}
+
+.md-card-image {
+	width: 400px !important;
+	height: 200px !important
+}
+
+.md-card-actions {
+
+	padding-left: 3px !important;
+	padding-right: 3px !important;
+}
+
+.md-avatar {
+	height: 40px !important;
+	width: 42px !important
+}
+
+.twitter-card {
+
+	padding: 10px 10px 10px 10px !important;
+}
+
+.md-select-content,
+.md-menu-content {
+	width: 50% !important;
+	max-width: 50% !important;
+}
+
+.md-theme-tocstack {
+	background-color: #efefef
+}
+
+
+
+.md-boards {
+	height: auto !important
+}
+
+p {
+	color: #282828;
+	font-size: 20px;
+text-align: left;
+}
+
+img {
+	display: block;
+	height: auto;
+	max-width: 100%;
+}
+
+.code-snippet {
+	display: block;
+	height: 300px !important;
+	max-width: 100%;
+}
+
+span {
+	color: #CC401B;
+}
+
+h2 {
+	font-size: 45px !important;
+	margin-top: 20px !important;
+
+	margin-bottom: 10px !important;
+
+	font-family: inherit !important;
+
+	font-weight: 500 !important;
+
+	line-height: 1.1 !important;
+
+	color: inherit !important;
+
+	text-align: center !important
+}
+
+h3 {
+	font-size: 30px !important;
+	margin-top: 20px !important;
+
+	margin-bottom: 10px !important;
+
+	font-family: inherit !important;
+
+	font-weight: 500 !important;
+
+	line-height: 1.1 !important;
+
+	color: inherit !important;
+
+	text-align: center !important
+}
+
+h4 {
+	font-size: 20px !important;
+	margin-top: 20px !important;
+
+	margin-bottom: 10px !important;
+
+	font-family: inherit !important;
+
+	font-weight: 500 !important;
+
+	line-height: 1.1 !important;
+
+	color: inherit !important;
+
+	text-align: center !important
+}
+.material-icons-custom {
+	font-family: 'Material Icons';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 96px;
+	line-height: 1;
+	letter-spacing: normal;
+	text-transform: none;
+	display: inline-block;
+	white-space: nowrap;
+	word-wrap: normal;
+	direction: ltr;
+}
+
+.md-row{
+	padding-bottom: 25px;
+}
+</style>
+
