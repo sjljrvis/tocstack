@@ -7,14 +7,13 @@
 					<a href="#" v-scroll-to="'#element2'">Scroll to #element 2</a>
 
 					<md-layout md-gutter>
-						<md-layout class="twitter-card" md-align="center" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="50">
-							<img src='https://hasura.io/rstatic/resources/hasura_ninga3.png'></img>
+						<md-layout  md-flex-xsmall="100" md-flex-small="100" md-flex-medium="50" md-vertical-align="center">
+							<img src="https://hasura.io/rstatic/resources/hasura_ninga3.png">
 						</md-layout>
-
 						<md-layout class="twitter-card" md-align="center" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="50" md-vertical-align="center">
 							<h2> Build
 								<span>Fast</span> with Hasura backend components.</h2>
-							<p style="color : #CC401B;">Don’t waste time writing repetitive code. #HasuraBaaS</p>
+							<p style="color : #4286f4">Don’t waste time writing repetitive code. #HasuraBaaS</p>
 						</md-layout>
 
 					</md-layout>
@@ -84,7 +83,7 @@
 						</md-board>
 						<md-board id="slide4">
 							<md-layout md-gutter>
-								<md-layout class="twitter-card" md-align="center" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="50">
+								<md-layout class="twitter-card" md-align="center" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="50" md-vertical-align="center">
 									<img class='code-snippet' src='https://hasura.io/rstatic/dist/09d9be2c190557c1dbf736dde688c99f.png'></img>
 								</md-layout>
 
@@ -119,16 +118,16 @@
 						<p style="color : #CC401B;">Stop environment config related bugs, before they begin.</p>
 
 					</md-layout>
-					<md-layout class="twitter-card" md-align="center" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="50">
-						<img class='code-snippet' src='https://hasura.io/rstatic/resources/hasura_ringmaster1.png'></img>
-					</md-layout>
-
+			
+					<md-layout  md-flex-xsmall="100" md-flex-small="100" md-flex-medium="50" md-vertical-align="center">
+							<img src="https://hasura.io/rstatic/resources/hasura_ringmaster1.png">
+						</md-layout>
 				</md-layout>
 
 			</div>
 		</div>
 
-		<div id='element4' style='background-color : #CC401B;color : #FFFFFF ;'>
+		<div id='element4' style='background-color : #142433 ;color : #FFFFFF ;'>
 			<div style='padding : 20px 20px 20px 20px'>
 				<a href="#" v-scroll-to="'#element5'">Scroll to #element 4</a>
 
@@ -172,8 +171,11 @@
 		<div id='element5' style='background-color : #FFFFFF ;'>
 			<div style='padding : 10px 10px 10px 10px'>
 				<a href="#" v-scroll-to="'#element1'">Scroll to #element 1</a>
-         <h2>tocstack</h2>
-				 <h3><span>Blogs</span> <span>#tweets</span> </h3>
+				<h2>tocstack</h2>
+				<h3>
+					<span>Blogs</span>
+					<span>#tweets</span>
+				</h3>
 				<md-layout md-gutter>
 					<md-layout class="twitter-card" md-align="center" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="50">
 						<md-card md-with-hover>
@@ -254,10 +256,11 @@
 				</md-layout>
 
 			</div>
+			
 		</div>
 
-    <!-- footer -->
-		  <Tocstackfooter></Tocstackfooter>
+		<!-- footer -->
+		<Tocstackfooter></Tocstackfooter>
 
 	</div>
 </template>
@@ -266,6 +269,13 @@
 <script>
 import Tocstackfooter from './tocstackfooter.vue'
 export default {
+
+	data: () => {
+		return {
+			imgsrc: '../../../assets/hasura.png'
+		}
+	},
+
 	beforeMount() {
 		this.$store.dispatch('setCurrentRoute', '/dashboard');
 	},
@@ -280,7 +290,7 @@ export default {
 
 	},
 	components: {
- Tocstackfooter
+		Tocstackfooter
 	},
 	computed: {
 

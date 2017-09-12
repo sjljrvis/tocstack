@@ -1,7 +1,7 @@
 <template>
   
     <!-- footer -->
-    <div style='background-color :#333333 ;color : #FFFFFF '>
+    <div style='background-color : #142433 ;color : #FFFFFF '>
       <div>
 
         <div style='padding : 10px 10px 10px 10px'>

@@ -24,7 +24,18 @@ export default new VueRouter({
 			path: '*' ,
 			component: require('../component/view/dashboard/dashboard.vue')
 		},
-		
+		{ 
+			name : 'devdashboard', 
+			path: '/devdashboard' ,
+			component: require('../component/view/dashboard/devdashboard.vue')
+		},
+		{ 
+			name : 'appManagement', 
+			path: '/appmanagement/:repository_id' ,
+			component: require('../component/view/dashboard/appmanagement/appmanagement.vue')
+		},
+
+
 		{ 
 			name : 'blog', 
 			path: '/blog' ,

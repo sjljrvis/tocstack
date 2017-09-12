@@ -91,6 +91,11 @@ body {
 	margin: auto;
 }
 
+code{
+	color : #03bc41 !important;
+	background: #00162d!important;
+}
+
 .divider {
 	position: relative;
 	padding-top: 10px;
@@ -153,6 +158,8 @@ body {
 .dashboard-card {
 	margin-top: .5em;
 	margin-bottom: .5em;
+	margin-left: 2em ;
+	margin-right: 2em ;
 }
 
 .md-toolbar.md-theme-default {
@@ -174,14 +181,10 @@ body {
 	background-color: rgba(153, 153, 153, 0.2);
 }
 
-.md-card {
-	width: 400px;
-	height: auto;
-}
 
 .md-card-image {
-	width: 400px !important;
-	height: 200px !important
+	width: 100%;
+	height: 100%
 }
 
 .md-card-actions {
@@ -222,12 +225,12 @@ p {
 text-align: left;
 }
 
-img {
-	display: block;
-	height: auto;
-	max-width: 100%;
-}
-
+ img {
+  max-width: 100%;
+    font-style: italic;
+    vertical-align: middle;
+} 
+  
 .code-snippet {
 	display: block;
 	height: 300px !important;
@@ -235,7 +238,7 @@ img {
 }
 
 span {
-	color: #CC401B;
+	color: #142433;
 }
 
 h2 {
@@ -269,7 +272,7 @@ h3 {
 
 	color: inherit !important;
 
-	text-align: center !important
+	/* text-align: center !important */
 }
 
 h4 {
@@ -286,7 +289,7 @@ h4 {
 
 	color: inherit !important;
 
-	text-align: center !important
+	/* text-align: center !important */
 }
 .material-icons-custom {
 	font-family: 'Material Icons';
@@ -304,6 +307,9 @@ h4 {
 
 .md-row{
 	padding-bottom: 25px;
+}
+.md-tab-header{
+ background: #FFFFFF !important;
 }
 </style>
 

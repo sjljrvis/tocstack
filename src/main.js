@@ -42,7 +42,9 @@ Vue.use(VueAuth, {
 	fetchData: { url: fetchUserUrl, method: 'GET', enabled: false }
 })
 
-
+Vue.material.registerTheme('green', {
+  primary: 'red',
+})
 
 // Enable devtools
 Vue.config.devtools = true
