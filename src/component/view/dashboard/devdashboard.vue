@@ -61,7 +61,7 @@ export default {
 	}),
 	beforeMount() {
 		this.getItems(() => {
-			this.$store.dispatch('setIsProgressVisible', false);
+			this.$store.dispatch('setIsProgressVisible', true);
 		});
     this.clearRepositoryItem();
 	},
@@ -101,7 +101,7 @@ export default {
 						this.$store.dispatch('setRepositoryItems', res.data);
 						this.payload.items = res.data;
 						// // !this.helper.isColumnRendered && this.getColumns();
-					
+					  this.$store.dispatch('setIsProgressVisible', false);
 					}
 				})
 				.catch(reject => console.log(reject));

@@ -1,7 +1,7 @@
 <template>
 	<div class="left-sidenav-container">
 
-		<md-toolbar  id='element1' class='md-large'>
+		<md-toolbar id='element1' class='md-large'>
 			<h2 class="md-title">My App</h2>
 		</md-toolbar>
 
@@ -47,6 +47,14 @@
 					</a>
 
 				</md-list-item>
+				<md-list-item>
+					<md-icon>error</md-icon>
+					<a hre=""@click="pushToLogin">
+						<span>Login / Sign Up</span>
+					</a>
+
+				</md-list-item>
+
 			</md-list>
 
 			<md-button id="sidebar-close-button" class=" md-fab md-fab md-clean" @click="closeRightSidenav">X</md-button>
@@ -120,7 +128,13 @@ export default {
 		},
 		close(ref) {
 			console.log('Closed: ' + ref);
-		}
+		},
+		pushToLogin() {
+			this.$router.push({
+				path: '/login', name: 'login',
+			})
+		},
+
 	}
 }
 </script>

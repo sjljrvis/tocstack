@@ -94,7 +94,7 @@ export default {
 		},
 		login() {
 			const { email, password, rememberMe, redirect } = this.payload;
-			const _redirect = (redirect != null && redirect != '') ? redirect : '/blog';
+			const _redirect = (redirect != null && redirect != '') ? redirect : '/devdashboard';
 			if (email && password && password.length > 3) {
 				this.$store.dispatch('setIsProgressVisible', true);
 				this.$auth.login({

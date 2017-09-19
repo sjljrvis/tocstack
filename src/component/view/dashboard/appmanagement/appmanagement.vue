@@ -4,7 +4,7 @@
     <md-card class='dashboard-card'>
       <md-card-header>
         <div class="md-title">
-          <h3>Posts</h3>
+          <h3>My apps</h3>
         </div>
       </md-card-header>
 
@@ -17,9 +17,9 @@
           </md-tab>
 
           <md-tab md-label="Monitor">
-            <md-layout>
+            
             <Monitor></Monitor>
-            </md-layout>
+            
           </md-tab>
 
           <md-tab md-label="Add config ">

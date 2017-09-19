@@ -1,14 +1,14 @@
 <template>
   
     <!-- footer -->
-    <div style='background-color : #142433 ;color : #FFFFFF '>
+    <div style='background-color : #142433 ;color : #FFFFFF ;  text-align: center;'>
       <div>
 
         <div style='padding : 10px 10px 10px 10px'>
 
           <md-layout md-gutter>
-            <md-layout md-flex-xsmall="100" md-flex-small="100" md-flex-medium="25" md-align="center">
-              <md-layout md-column>
+            <md-layout md-align="center" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="25" >
+              <md-layout md-column >
                 <a style="color : #FFFFFF !important" href="" target="_blank">
                   <h4>About Creator</h4>
                 </a>
@@ -35,7 +35,7 @@
 
               </md-layout>
             </md-layout>
-            <md-layout md-flex-xsmall="100" md-flex-small="100" md-flex-medium="25" md-align="center">
+            <md-layout md-align="center" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="25">
               <md-layout md-column>
                 <h4>Technologies used</h4>
                 <h4>Get in touch</h4>
@@ -92,7 +92,4 @@ export default {
   text-align: center;
 }
 
-#example-3 .flex {
-  margin-bottom: 16px;
-}
 </style>
