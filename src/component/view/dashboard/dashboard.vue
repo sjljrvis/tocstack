@@ -1,133 +1,152 @@
 <template>
 	<div>
-		<div style='background-color :#efefef ;color : #282828 '>
+
+		<div style='background-color :#efefef ; height:100vh ;background:url(http://longwallpapers.com/Desktop-Wallpaper/rocket-backgrounds-For-Desktop-Wallpaper.jpg) center/cover no-repeat'>
 			<div>
-
 				<div style='padding : 10px 10px 10px 10px'>
-					<a href="#" v-scroll-to="'#element2'">Scroll to #element 2</a>
 
+					<!-- background: url(https://www.getpostman.com/img/v2/homepage/postman-hero.svg) center/cover no-repeat-->
 					<md-layout md-gutter>
-						<md-layout  md-flex-xsmall="100" md-flex-small="100" md-flex-medium="50" md-vertical-align="center">
-							<img src="https://hasura.io/rstatic/resources/hasura_ninga3.png">
+						<md-layout md-flex-xsmall="100" md-flex-small="100" md-flex-medium="70" md-vertical-align="center">
+							<md-layout md-column>
+								<md-layout md-row md-align="center">
+									<h1 style="color :#efefef !important ; font-size:5.5em">tocstack</h1>
+								</md-layout>
+								<md-layout md-row md-align="center">
+									<md-button style="width : 150px !important ; font-weight:500" class="md-raised md-warn">Login/Sign up</md-button>
+								</md-layout>
+								<md-layout md-row md-align="center">
+									<h2 style="color :#efefef !important"> One shot app deployment</h2>
+									<p style="color :#efefef ">Don’t waste time writing repetitive code. #PaaS</p>
+								</md-layout>
+							</md-layout>
 						</md-layout>
-						<md-layout class="twitter-card" md-align="center" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="50" md-vertical-align="center">
-							<h2> Build
-								<span>Fast</span> with Hasura backend components.</h2>
-							<p style="color : #4286f4">Don’t waste time writing repetitive code. #HasuraBaaS</p>
+						<md-layout class="twitter-card" md-align="center" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="30" md-vertical-align="center">
 						</md-layout>
-
 					</md-layout>
 
 				</div>
 			</div>
-
 		</div>
 
-		<div id='element2' style='background-color : #d9d9dd ;color : #000000 '>
-			<a href="#" v-scroll-to="'#element3'">Scroll to #element 2</a>
-
-			<md-layout md-gutter>
-				<md-layout md-vertical-align="center">
-					<md-boards class="md-transparent" :md-controls="true">
-
-						<md-board id="slide1">
-							<md-layout md-gutter>
-								<md-layout class="twitter-card" md-align="center" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="50">
-									<img class='code-snippet' src='https://hasura.io/rstatic/dist/09d9be2c190557c1dbf736dde688c99f.png'></img>
-								</md-layout>
-
-								<md-layout class="twitter-card" md-align="center" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="50" md-vertical-align="center">
-									<h3>Data APIs<br>
-										<span>#tocstack</span>
-									</h3>
-									<p>Authentication and related APIs based on password, social login, SMS OTP, email verification.</p>
-									<p>Ready to use authorization service that provides APIs for almost all common authentication use cases. Read more from our blog</p>
-
-								</md-layout>
-
-							</md-layout>
-						</md-board>
-						<md-board id="slide2">
-							<md-layout md-gutter>
-								<md-layout class="twitter-card" md-align="center" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="50">
-									<img class='code-snippet' src='https://hasura.io/rstatic/dist/8e7ede013f3805729e3c185da3c8cc89.png'></img>
-								</md-layout>
-
-								<md-layout class="twitter-card" md-align="center" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="50" md-vertical-align="center">
-									<h3>Auth APIs<br>
-										<span>#tocstack</span>
-									</h3>
-									<p>HTTP API over Postgres with role based row level permissions. A JSON based query language, similar to GraphQL.</p>
-									<p>The power of Postgres with the ease of JSON. The most performant data APIs ever. Read more from our blog</p>
-
-								</md-layout>
-
-							</md-layout>
-						</md-board>
-						<md-board id="slide3">
-							<md-layout md-gutter>
-								<md-layout class="twitter-card" md-align="center" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="50">
-									<img class='code-snippet' src='https://hasura.io/rstatic/resources/banner/deploy-git.png'></img>
-								</md-layout>
-
-								<md-layout class="twitter-card" md-align="center" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="50" md-vertical-align="center">
-									<h3>Deploy with git<br>
-										<span>#tocstack</span>
-									</h3>
-									<p>Create a Dockerfile, and push your code. Or use one of our ever growing git-push templates to get started quickly.</p>
-									<p>Deployment automation done right - just git push your code to deploy a containerized service. Read more from our blog</p>
-
-								</md-layout>
-
-							</md-layout>
-						</md-board>
-						<md-board id="slide4">
-							<md-layout md-gutter>
-								<md-layout class="twitter-card" md-align="center" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="50" md-vertical-align="center">
-									<img class='code-snippet' src='https://hasura.io/rstatic/dist/09d9be2c190557c1dbf736dde688c99f.png'></img>
-								</md-layout>
-
-								<md-layout class="twitter-card" md-align="center" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="50" md-vertical-align="center">
-									<h3>Data APIs<br>
-										<span>#tocstack</span>
-									</h3>
-									<p>HTTP API over Postgres with role based row level permissions. A JSON based query language, similar to GraphQL.</p>
-									<p>The power of Postgres with the ease of JSON. The most performant data APIs ever. Read more from our blog</p>
-
-								</md-layout>
-
-							</md-layout>
-						</md-board>
-
-					</md-boards>
-
-				</md-layout>
-			</md-layout>
-
-		</div>
-
-		<div id='element3' style='background-color : #efefef ;'>
-			<div style='padding : 10px 10px 10px 10px'>
-				<a href="#" v-scroll-to="'#element4'">Scroll to #element 4</a>
-
+		<div style='height:100vh;padding: 5% 0;background-color : rgba(19, 41, 78, 1);color : #efefef '>
+			<div style="padding: 10% 0;">
 				<md-layout md-gutter>
-
-					<md-layout class="twitter-card" md-align="center" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="50" md-vertical-align="center">
-						<h3>Provision
-							<span>Fast</span>. Install on your laptop or your cloud.</h3>
-						<p style="color : #CC401B;">Stop environment config related bugs, before they begin.</p>
-
-					</md-layout>
-			
-					<md-layout  md-flex-xsmall="100" md-flex-small="100" md-flex-medium="50" md-vertical-align="center">
-							<img src="https://hasura.io/rstatic/resources/hasura_ringmaster1.png">
+					<md-layout md-align="center" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="100" md-vertical-align="center">
+						<md-layout md-column>
+							<md-layout md-row md-align="center">
+								<h1 style="color :#efefef !important ; font-size : 4em ;text-align : center">What is tocstack ?</h1>
+							</md-layout>
+							<md-layout md-row md-align="center">
+								<p style="text-align : center ;color :#efefef !important; font-size : 2em ;">tocstack is easy to use #PaaS for fast application deployment</p>
+							</md-layout>
 						</md-layout>
+					</md-layout>
+				</md-layout>
+			</div>
+		</div>
+
+		<div style='background-color : #ffffff'>
+			<div style="padding: 10% 0;">
+				<md-layout md-gutter>
+					<md-layout class="twitter-card" md-align="center" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="50" md-vertical-align="center">
+					<h1 style="color :#000000 !important ; font-size : 4em ;text-align : center">How to use ?</h1>
+
+					<ul style=" tesxt-align : center;color : #000000 !important; font-size : 2em ;">
+						<li>Write code</li>
+						<li> git push tocstack master</li>
+						<li> App is online &#128515;</li>
+					</ul>
+					</md-layout>
+
+					<md-layout md-flex-xsmall="100" md-flex-small="100" md-flex-medium="50" md-vertical-align="center">
+						<img src="../../../assets/android.png">
+					</md-layout>
 				</md-layout>
 
 			</div>
 		</div>
 
-		<div id='element4' style='background-color : #142433 ;color : #FFFFFF ;'>
+		<div style='height:100vh;padding: 5% 0;background-color : #d9d9dd ;color : #000000 '>
+			<div style="padding: 10% 0;">
+				<md-layout md-gutter>
+					<md-layout md-align="center" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="50">
+						<img class='code-snippet' src='../../../assets/code1.png'></img>
+						<!-- https://hasura.io/rstatic/dist/09d9be2c190557c1dbf736dde688c99f.png -->
+					</md-layout>
+
+					<md-layout class="twitter-card" md-align="center" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="50" md-vertical-align="center">
+						<h3>Data APIs<br>
+							<span>#tocstack</span>
+						</h3>
+						<p>Authentication and related APIs based on password, social login, SMS OTP, email verification.</p>
+						<p>Ready to use authorization service that provides APIs for almost all common authentication use cases. Read more from our blog</p>
+					</md-layout>
+				</md-layout>
+			</div>
+		</div>
+
+		<div style='height:100vh;padding: 5% 0;background-color :  #ffffff ;color : #000000 '>
+			<div style="padding: 10% 0;">
+				<md-layout md-gutter>
+					<md-layout class="twitter-card" md-align="center" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="50">
+						<img class='code-snippet' src='https://hasura.io/rstatic/dist/8e7ede013f3805729e3c185da3c8cc89.png'></img>
+					</md-layout>
+
+					<md-layout class="twitter-card" md-align="center" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="50" md-vertical-align="center">
+						<h3>Auth APIs<br>
+							<span>#tocstack</span>
+						</h3>
+						<p>HTTP API over Postgres with role based row level permissions. A JSON based query language, similar to GraphQL.</p>
+						<p>The power of Postgres with the ease of JSON. The most performant data APIs ever. Read more from our blog</p>
+
+					</md-layout>
+
+				</md-layout>
+			</div>
+		</div>
+
+		<div style='height:100vh;padding: 5% 0;background-color : #d9d9dd ;color : #000000 '>
+			<div style="padding: 10% 0;">
+				<md-layout md-gutter>
+					<md-layout class="twitter-card" md-align="center" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="50">
+						<img class='code-snippet' src='https://hasura.io/rstatic/resources/banner/deploy-git.png'></img>
+					</md-layout>
+
+					<md-layout class="twitter-card" md-align="center" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="50" md-vertical-align="center">
+						<h3>Deploy with git<br>
+							<span>#tocstack</span>
+						</h3>
+						<p>Create a Dockerfile, and push your code. Or use one of our ever growing git-push templates to get started quickly.</p>
+						<p>Deployment automation done right - just git push your code to deploy a containerized service. Read more from our blog</p>
+
+					</md-layout>
+
+				</md-layout>
+			</div>
+		</div>
+
+		<div style='height:100vh;padding: 5% 0;background-color : #ffffff;color : #000000 '>
+			<div style="padding: 10% 0;">
+				<md-layout md-gutter>
+					<md-layout class="twitter-card" md-align="center" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="50" md-vertical-align="center">
+						<img class='code-snippet' src='https://hasura.io/rstatic/dist/09d9be2c190557c1dbf736dde688c99f.png'></img>
+					</md-layout>
+
+					<md-layout class="twitter-card" md-align="center" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="50" md-vertical-align="center">
+						<h3>Data APIs<br>
+							<span>#tocstack</span>
+						</h3>
+						<p>HTTP API over Postgres with role based row level permissions. A JSON based query language, similar to GraphQL.</p>
+						<p>The power of Postgres with the ease of JSON. The most performant data APIs ever. Read more from our blog</p>
+
+					</md-layout>
+
+				</md-layout>
+			</div>
+		</div>
+
+		<div style='background-color : #142433 ;color : #FFFFFF ;'>
 			<div style='padding : 20px 20px 20px 20px'>
 				<a href="#" v-scroll-to="'#element5'">Scroll to #element 4</a>
 
@@ -168,7 +187,7 @@
 			</div>
 		</div>
 
-		<div id='element5' style='background-color : #FFFFFF ;'>
+		<div style='background-color : #FFFFFF ;'>
 			<div style='padding : 10px 10px 10px 10px'>
 				<a href="#" v-scroll-to="'#element1'">Scroll to #element 1</a>
 				<h2>tocstack</h2>
@@ -256,7 +275,7 @@
 				</md-layout>
 
 			</div>
-			
+
 		</div>
 
 		<!-- footer -->

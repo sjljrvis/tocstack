@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<SideBar></SideBar>
+		<!-- <SideBar></SideBar> -->
 		<div :style="[ContentMargin]">
 			<md-progress md-indeterminate class="md-accent" v-if="IsProgressVisible"></md-progress>
 			<div class="content-div">

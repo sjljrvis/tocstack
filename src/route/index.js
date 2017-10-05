@@ -34,8 +34,11 @@ export default new VueRouter({
 			path: '/appmanagement/:repository_id' ,
 			component: require('../component/view/dashboard/appmanagement/appmanagement.vue')
 		},
-
-
+		{ 
+			name : 'createnewapp', 
+			path: '/appmanagement/createnewapp' ,
+			component: require('../component/view/dashboard/appmanagement/createnewapp.vue')
+		},
 		{ 
 			name : 'blog', 
 			path: '/blog' ,

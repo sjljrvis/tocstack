@@ -10,7 +10,7 @@
 		</md-button>
 
 		<md-sidenav class="md-right" ref="rightSidenav" @open="open('Right')" @close="close('Right')">
-			<md-toolbar style='background-color:#efefef' class="md-large">
+			<md-toolbar style='background-color:#00162d;color : #FFFFFF' class="md-large">
 				<div class="md-toolbar-container">
 					<h3 class="md-title">my App</h3>
 				</div>

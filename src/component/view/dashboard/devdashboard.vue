@@ -1,46 +1,23 @@
 <template>
 	<div class='base-div'>
-
-		<!-- <md-layout md-gutter>
-																				<md-layout md-align="center"> -->
-
 		<md-card md-with-hover class='dashboard-card'>
 			<md-card-header>
 				<div class="md-title">
-					<h3>Posts</h3>
+					<h3>Apps</h3>
 				</div>
+				<md-button style="float:right ; margin-right:10px" class="md-raised md-primary" @click="pushtocreatenewapp">+ new app</md-button>
 			</md-card-header>
 
 			<md-card-content>
 				<md-list>
-
-					<!-- <md-list-item @click="push(appManagement)">
-
-								<md-icon>code</md-icon>
-								<p>Inbox</p>
-								<p style="padding-left: 1em;padding-right: 1em;"> Created on</p>
-
-							</md-list-item> -->
-
 					<md-list-item v-for="item in payload.items" v-bind:data="item" v-bind:key="item.repositoryName" @click="(e)=> goToAppManagement(e,item)">
-
 						<md-icon>code</md-icon>
 						<p>{{item.repositoryName}}</p>
-						<p style="padding-left: 1em;padding-right: 1em;"> Created on {{item.date}}</p>
-
+						<p style="padding-left: 1em;padding-right: 1em;">{{item.language}}</p>
 					</md-list-item>
-
 				</md-list>
 			</md-card-content>
-
 		</md-card>
-
-		<!-- </md-layout>
-																			</md-layout> -->
-		<md-snackbar :md-position="vertical + ' ' + horizontal" ref="snackbar" :md-duration="duration">
-			<span>Request put to Queue</span>
-			<md-button class="md-primary" md-theme="light-blue" @click="$refs.snackbar.close()">Retry</md-button>
-		</md-snackbar>
 	</div>
 </template>
 
@@ -63,7 +40,7 @@ export default {
 		this.getItems(() => {
 			this.$store.dispatch('setIsProgressVisible', true);
 		});
-    this.clearRepositoryItem();
+		this.clearRepositoryItem();
 	},
 	mounted() {
 	},
@@ -76,13 +53,7 @@ export default {
 	computed: {
 	},
 	methods: {
-		open() {
-			this.$refs.snackbar.open();
-		},
 		goToAppManagement(e, item) {
-
-			//const { failedLeadItems } = this.$store.getters;
-			//item = failedLeadItems[rowIndex];
 			this.$router.push({
 				path: '/appmanagement', name: 'appManagement',
 				params: {
@@ -90,9 +61,12 @@ export default {
 					'item': item
 				}
 			})
-
 		},
-
+		pushtocreatenewapp() {
+			this.$router.push({
+				path: '/appmanagement/createnewapp', name: 'createnewapp'
+			})
+		},
 		getItems(callback = null) {
 			makeRequest('/repositories', 'GET', null, null)
 				.then((result) => {
@@ -100,18 +74,20 @@ export default {
 					if (!result.error && res) {
 						this.$store.dispatch('setRepositoryItems', res.data);
 						this.payload.items = res.data;
-						// // !this.helper.isColumnRendered && this.getColumns();
-					  this.$store.dispatch('setIsProgressVisible', false);
+						this.payload.items.forEach(x => {
+							x.date = x.date.toDateString();
+						})
+						this.$store.dispatch('setIsProgressVisible', false);
 					}
 				})
 				.catch(reject => console.log(reject));
 		},
 
-		clearRepositoryItem() { 
+		clearRepositoryItem() {
 			if (this.$store.getters.repositoryItem != undefined) {
 				this.$store.getters.repositoryItem = undefined
 			}
-			console.log("Main item",this.$store.getters.repositoryItem)
+			console.log("Main item", this.$store.getters.repositoryItem)
 		}
 
 
