@@ -10,7 +10,7 @@
 						<md-layout md-flex-xsmall="100" md-flex-small="100" md-flex-medium="70" md-vertical-align="center">
 							<md-layout md-column>
 								<md-layout md-row md-align="center">
-									<h1 style="color :#efefef !important ; font-size:5.5em">tocstack</h1>
+									<h1 style="color :#efefef !important ; font-size:4.5em">tocstack</h1>
 								</md-layout>
 								<md-layout md-row md-align="center">
 									<md-button style="width : 150px !important ; font-weight:500" class="md-raised md-warn">Login/Sign up</md-button>
@@ -35,7 +35,7 @@
 					<md-layout md-align="center" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="100" md-vertical-align="center">
 						<md-layout md-column>
 							<md-layout md-row md-align="center">
-								<h1 style="color :#efefef !important ; font-size : 4em ;text-align : center">What is tocstack ?</h1>
+								<h1 style="color :#efefef !important ; font-size : 3em ;text-align : center">What is tocstack ?</h1>
 							</md-layout>
 							<md-layout md-row md-align="center">
 								<p style="text-align : center ;color :#efefef !important; font-size : 2em ;">tocstack is easy to use #PaaS for fast application deployment</p>
@@ -50,13 +50,13 @@
 			<div style="padding: 10% 0;">
 				<md-layout md-gutter>
 					<md-layout class="twitter-card" md-align="center" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="50" md-vertical-align="center">
-					<h1 style="color :#000000 !important ; font-size : 4em ;text-align : center">How to use ?</h1>
+						<h1 style="color :#000000 !important ; font-size : 3.5em ;text-align : center">How to use ?</h1>
 
-					<ul style=" tesxt-align : center;color : #000000 !important; font-size : 2em ;">
-						<li>Write code</li>
-						<li> git push tocstack master</li>
-						<li> App is online &#128515;</li>
-					</ul>
+						<ul style="color : #000000 !important; font-size : 2em ;">
+							<li>Write code</li>
+							<li> git push tocstack master</li>
+							<li> App is online &#128515;</li>
+						</ul>
 					</md-layout>
 
 					<md-layout md-flex-xsmall="100" md-flex-small="100" md-flex-medium="50" md-vertical-align="center">
@@ -67,7 +67,7 @@
 			</div>
 		</div>
 
-		<div style='height:100vh;padding: 5% 0;background-color : #d9d9dd ;color : #000000 '>
+		<div style='background-color : #d9d9dd ;color : #000000 '>
 			<div style="padding: 10% 0;">
 				<md-layout md-gutter>
 					<md-layout md-align="center" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="50">
@@ -76,29 +76,33 @@
 					</md-layout>
 
 					<md-layout class="twitter-card" md-align="center" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="50" md-vertical-align="center">
-						<h3>Data APIs<br>
-							<span>#tocstack</span>
-						</h3>
-						<p>Authentication and related APIs based on password, social login, SMS OTP, email verification.</p>
-						<p>Ready to use authorization service that provides APIs for almost all common authentication use cases. Read more from our blog</p>
+						<h3 style=" font-size : 2em !important ;">Write code</h3>
+						<p style="font-size : 1.2em ;">Given code is a simple hello world application written in nodeJS ,running on port 3000 .Similarly you can create other
+							<span>web-applications,microservices,cronjobs</span> or your own
+							<span>REST API</span> and host it on tocstack.</p>
+						<p>Language support - nodeJS (python,Go,ruby will be added soon)</p>
 					</md-layout>
 				</md-layout>
 			</div>
 		</div>
 
-		<div style='height:100vh;padding: 5% 0;background-color :  #ffffff ;color : #000000 '>
+		<div style=';background-color :  #ffffff ;color : #000000 '>
 			<div style="padding: 10% 0;">
 				<md-layout md-gutter>
 					<md-layout class="twitter-card" md-align="center" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="50">
-						<img class='code-snippet' src='https://hasura.io/rstatic/dist/8e7ede013f3805729e3c185da3c8cc89.png'></img>
+						<img class='code-snippet' src='../../../assets/terminal.png'></img>
 					</md-layout>
 
 					<md-layout class="twitter-card" md-align="center" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="50" md-vertical-align="center">
-						<h3>Auth APIs<br>
-							<span>#tocstack</span>
-						</h3>
-						<p>HTTP API over Postgres with role based row level permissions. A JSON based query language, similar to GraphQL.</p>
-						<p>The power of Postgres with the ease of JSON. The most performant data APIs ever. Read more from our blog</p>
+						<h2 style="color :#000000 !important ; font-size : 3em !important;text-align : center">Deploy with </h2>
+						<h2 style="color :#ff5722 !important ; font-size : 3em !important;text-align : center">&nbsp; git </h2>
+
+						<ul>
+							<li style="color : #000000 !important; font-size : 38px ;">git init</li>
+							<li style="color : #000000 !important; font-size : 38px ;"> git add --all</li>
+							<li style="color : #000000 !important; font-size : 38px ;"> git commit -m"message"</li>
+							<li style="color : #000000 !important; font-size : 38px ;"> git push tocstack master</li>
+						</ul>
 
 					</md-layout>
 

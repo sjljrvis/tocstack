@@ -1,5 +1,6 @@
 <template>
   <div class="login-div">
+    <h1 style="color :#efefef !important;font-size:4.5em;text-align:center">tocstack</h1>
     <div>
       <md-card>
         <md-card-area>
@@ -33,7 +34,7 @@
         </md-card-area>
 
         <md-card-actions>
-          <md-button @click="login">Create</md-button>
+          <md-button  style="width : auto !important ; font-weight:400 ; font-size:inherit" class="md-raised md-warn" @click="login">Create</md-button>
         </md-card-actions>
       </md-card>
 

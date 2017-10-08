@@ -1,40 +1,40 @@
 <template>
 	<div class="login-div">
+			<h1 style="color :#efefef !important;font-size:4.5em;text-align:center">tocstack</h1>
 		<div>
-     		<md-card>
-			<md-card-area>
-				<md-card-header>
-					<div class="md-title">Login</div>
-				</md-card-header>
-	
-				<md-card-content>
-					<form style="width:350px">
-						<md-input-container>
-							<md-icon>person</md-icon>
-							<label>Username</label>
-							<md-input type="text" v-model="payload.email" ref="username"></md-input>
-						</md-input-container>
-	
-						<md-input-container>
-							<md-icon>remove_red_eye</md-icon>
-							<label>Password</label>
-							<md-input type="password" v-model="payload.password" ref="password"></md-input>
-						</md-input-container>
-						<md-checkbox v-model="payload.rememberMe" class="md-primary">Remember Me</md-checkbox>
-					</form>
-	
-				</md-card-content>
-			</md-card-area>
-	
-			<md-card-actions>
-				<md-button @click="login">LOGIN</md-button>
-			</md-card-actions>
-		</md-card>
-	
-		<md-dialog-confirm ref="confirm_dailog" :md-title="error.title" :md-content-html="error.message" :md-ok-text="error.okText" :md-cancel-text="error.cancelText" @open="onOpen" @close="onClose">
-		</md-dialog-confirm>
+			<md-card>
+				<md-card-area>
+					<md-card-header>
+						<div class="md-title"><strong>Login</strong></div>
+					</md-card-header>
+
+					<md-card-content>
+						<form style="width:350px">
+							<md-input-container>
+								<md-icon>person</md-icon>
+								<label>Username</label>
+								<md-input type="text" v-model="payload.email" ref="username"></md-input>
+							</md-input-container>
+
+							<md-input-container>
+								<md-icon>remove_red_eye</md-icon>
+								<label>Password</label>
+								<md-input type="password" v-model="payload.password" ref="password"></md-input>
+							</md-input-container>
+							<md-checkbox v-model="payload.rememberMe" class="md-primary">Remember Me</md-checkbox>
+						</form>
+
+					</md-card-content>
+				</md-card-area>
+				<md-card-actions>
+					<md-button style="width : auto !important ; font-weight:500 ; font-size:inherit" class="md-raised md-warn" @click="login">LOGIN</md-button>
+				</md-card-actions>
+			</md-card>
+
+			<md-dialog-confirm ref="confirm_dailog" :md-title="error.title" :md-content-html="error.message" :md-ok-text="error.okText" :md-cancel-text="error.cancelText" @open="onOpen" @close="onClose">
+			</md-dialog-confirm>
 		</div>
-		
+
 	</div>
 </template>
 

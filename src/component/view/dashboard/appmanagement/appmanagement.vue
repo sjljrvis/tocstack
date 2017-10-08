@@ -57,7 +57,6 @@ export default {
       return
     }
     this.$store.dispatch('setRepositoryItem', item)
-    console.log("Store App",this.$store)   
   },
   mounted() {
 

@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div >
 		<!-- <SideBar></SideBar> -->
 		<div :style="[ContentMargin]">
 			<md-progress md-indeterminate class="md-accent" v-if="IsProgressVisible"></md-progress>
@@ -79,10 +79,11 @@ export default {
 
 <style>
 body {
-	background: #efefef;
+
 	font-family: 'Dosis', sans-serif;
 	font-size: 20px;
 	line-height: 1.42857;
+	background-color:rgba(19, 41, 78, 1)
 }
 
 .content-div {
@@ -238,7 +239,7 @@ text-align: left;
 }
 
 span {
-	color: #142433;
+	color: #ff5722;
 }
 
 h2 {
