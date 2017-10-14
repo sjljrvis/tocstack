@@ -13,7 +13,7 @@
 									<h1 style="color :#efefef !important ; font-size:4.5em">tocstack</h1>
 								</md-layout>
 								<md-layout md-row md-align="center">
-									<md-button style="width : 150px !important ; font-weight:500" class="md-raised md-warn">Login/Sign up</md-button>
+									<md-button style="width : 150px !important ; font-weight:700" class="md-raised md-warn" @click="pushToLoginPage">Login/Sign up</md-button>
 								</md-layout>
 								<md-layout md-row md-align="center">
 									<h2 style="color :#efefef !important"> One shot app deployment</h2>
@@ -319,7 +319,11 @@ export default {
 
 	},
 	methods: {
-
+		pushToLoginPage() {
+			this.$router.push({
+				path: '/login', name: 'login',
+			})
+		}
 	}
 }
 </script>

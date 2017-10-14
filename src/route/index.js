@@ -11,7 +11,11 @@ export default new VueRouter({
 			path: '/login',
 			component: require('../component/view/login/login.vue'),
 		},
-
+		{
+			name: 'register',
+			path: '/register',
+			component: require('../component/view/register/register.vue'),
+		},
 		// {
 		// 	path: '*',
 		// 	redirect: '/dashboard',

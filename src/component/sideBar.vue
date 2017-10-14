@@ -1,10 +1,6 @@
 <template>
 	<div class="left-sidenav-container">
 
-		<md-toolbar id='element1' class='md-large'>
-			<h2 class="md-title">My App</h2>
-		</md-toolbar>
-
 		<md-button class="md-fab-top-right md-fab md-clean" @click="toggleRightSidenav">
 			<md-icon>menu</md-icon>
 		</md-button>

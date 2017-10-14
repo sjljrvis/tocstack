@@ -119,7 +119,6 @@ export default {
 					rememberMe: rememberMe,
 					redirect: _redirect,
 					success(res) {
-					
 					},
 					error(error) {
 						this.$store.dispatch('setIsProgressVisible', false);
