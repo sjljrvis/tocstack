@@ -2,7 +2,7 @@
 	<div >
 		<!-- <SideBar></SideBar> -->
 		<div :style="[ContentMargin]">
-			<md-progress md-indeterminate class="md-accent" v-if="IsProgressVisible"></md-progress>
+			<md-progress md-indeterminate class="md-warn" v-if="IsProgressVisible"></md-progress>
 			<div class="content-div">
 				<transition name="md-router" appear>
 					<router-view></router-view>

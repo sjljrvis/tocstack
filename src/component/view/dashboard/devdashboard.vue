@@ -1,21 +1,6 @@
 <template>
 	<div class='base-div'>
-		<div style="padding-left: 37px;padding-right:37px">
-			<md-layout md-gutter>
-				<md-layout md-align="start" md-flex-xsmall="50" md-flex-small="50" md-flex-medium="50">
-					<h3 style="color :#efefef !important;font-size:50px!important">
-						<strong>tocstack</strong>
-					</h3>
-				</md-layout>
-				<md-layout md-align="end" md-flex-xsmall="50" md-flex-small="50" md-flex-medium="50">
-					<div>
-						<md-avatar style="width:40px !important;height:40px !important;margin-top: 30px;">
-							<img src="../../../assets/sejal.png" alt="People">
-						</md-avatar>
-					</div>
-				</md-layout>
-			</md-layout>
-		</div>
+		<DashboardHeader></DashboardHeader>
 		<md-card md-with-hover class='dashboard-card'>
 			<md-card-header>
 				<div class="md-title">
@@ -45,6 +30,7 @@
 
 <script>
 import { makeRequest } from '../../../helper/internet';
+import DashboardHeader from './partial/dashboardheader.vue'
 export default {
 	data: () => ({
 		vertical: 'top',
@@ -71,7 +57,7 @@ export default {
 	destroyed() {
 	},
 	components: {
-		
+		DashboardHeader
 	},
 	computed: {
 	},

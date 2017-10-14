@@ -7,7 +7,7 @@ import VueAxios from 'vue-axios'
 import VueAuth from '@websanova/vue-auth'
 import VueMaterial from 'vue-material'
 import VueScrollTo from 'vue-scrollto'
-
+import VueLocalStorage from 'vue-localstorage'
 
 
 //import styles
@@ -25,6 +25,7 @@ Vue.router = router
 Vue.use(VueMaterial)
 Vue.use(VueAxios, axios)
 Vue.use(VueScrollTo)
+Vue.use(VueLocalStorage, { name: 'browserStore' });
 
 
 Vue.use(VueAuth, {
@@ -40,8 +41,8 @@ Vue.use(VueAuth, {
 	router: require('@websanova/vue-auth/drivers/router/vue-router.2.x.js'),
 	loginData: { url: `${URL_BASE}/login`, fetchUser: false },
 	refreshData: { enabled: false },
-	fetchData: { url: `${URL_BASE}/auth/userDeatils`, method: 'GET', enabled: false },
-	logoutData: { url: `${URL_BASE}/admin/adminuserlogout`, method: 'GET', redirect: '/login', makeRequest: true }
+	fetchData: { url: `${URL_BASE}/auth/userDetails`, method: 'GET', enabled: false },
+	logoutData: { url: `${URL_BASE}/logout`, method: 'GET', redirect: '/login', makeRequest: true }
 })
 
 
