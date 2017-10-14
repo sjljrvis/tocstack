@@ -37,12 +37,12 @@ export default {
 
 	}),
 	beforeMount() {
-		this.getItems(() => {
-			this.$store.dispatch('setIsProgressVisible', true);
-		});
 		this.clearRepositoryItem();
 	},
 	mounted() {
+		this.getItems(() => {
+			this.$store.dispatch('setIsProgressVisible', true);
+		});
 	},
 	beforeDestroy() {
 	},

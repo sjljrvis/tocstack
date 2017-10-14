@@ -1,11 +1,13 @@
 <template>
 	<div class="login-div">
-			<h1 style="color :#efefef !important;font-size:4.5em;text-align:center">tocstack</h1>
+		<h1 style="color :#efefef !important;font-size:4.5em;text-align:center">tocstack</h1>
 		<div>
 			<md-card>
 				<md-card-area>
 					<md-card-header>
-						<div class="md-title"><strong>Login</strong></div>
+						<div class="md-title">
+							<strong>Login</strong>
+						</div>
 					</md-card-header>
 
 					<md-card-content>
@@ -47,6 +49,7 @@ export default {
 	},
 	mounted() {
 		if (this.$auth.redirect()) {
+			console.log(this.$auth.redirect().from.name)
 			this.redirect = this.$auth.redirect().from.name
 		}
 	},
@@ -81,6 +84,7 @@ export default {
 	},
 	methods: {
 		openDialog() {
+			console.log("I am called")
 			this.$refs.confirm_dailog.open();
 		},
 		closeDialog() {
@@ -108,11 +112,10 @@ export default {
 					rememberMe: rememberMe,
 					redirect: _redirect,
 					success(res) {
-						this.$store.dispatch('setIsProgressVisible', false);
-						console.log(res)
 					},
 					error(error) {
 						this.$store.dispatch('setIsProgressVisible', false);
+						this.openDialog();
 					}
 				})
 			} else {

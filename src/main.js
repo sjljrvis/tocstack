@@ -26,21 +26,24 @@ Vue.use(VueMaterial)
 Vue.use(VueAxios, axios)
 Vue.use(VueScrollTo)
 
+
 Vue.use(VueAuth, {
 	auth: {
 		request: function (req, token) {
-			this.options.http._setHeaders.call(this, req, { Authorization: 'Bearer ' + token })
+			this.options.http._setHeaders.call(this, req, { Authorization: 'Bearer ' + token });
 		},
 		response: (res) => {
-			return res.data.token ;
+				return res.data.token;		
 		}
 	},
 	http: require('@websanova/vue-auth/drivers/http/axios.1.x.js'),
 	router: require('@websanova/vue-auth/drivers/router/vue-router.2.x.js'),
-	loginData: { url: loginUrl, fetchUser: false },
+	loginData: { url: `${URL_BASE}/login`, fetchUser: false },
 	refreshData: { enabled: false },
-	fetchData: { url: fetchUserUrl, method: 'GET', enabled: false }
+	fetchData: { url: `${URL_BASE}/auth/userDeatils`, method: 'GET', enabled: false },
+	logoutData: { url: `${URL_BASE}/admin/adminuserlogout`, method: 'GET', redirect: '/login', makeRequest: true }
 })
+
 
 Vue.material.registerTheme('green', {
   primary: 'red',

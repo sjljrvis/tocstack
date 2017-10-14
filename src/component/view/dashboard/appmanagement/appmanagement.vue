@@ -59,7 +59,7 @@ export default {
     this.$store.dispatch('setRepositoryItem', item)
   },
   mounted() {
-
+	this.$store.dispatch('setIsProgressVisible', false);
   },
   beforeDestroy() {
   },
