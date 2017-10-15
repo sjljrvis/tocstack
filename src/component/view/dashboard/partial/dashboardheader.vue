@@ -61,16 +61,16 @@ export default {
 			})
 		},
 		logoutUser() {
-			makeRequest('/logout', 'GET', null, null)
-				.then((result) => {
-					let res = result.res;
-					console.log(res)
-					if (!result.error && res) {
-					 this.pushToPage('login');
-					 this.$browserStore.set('default_auth_token','0')	
-					}
-				})
-				.catch(reject => console.log(reject));
+			this.$auth.logout({
+				makeRequest: true,
+				success: function (res) {
+					location.reload();
+				},
+				error: function (error) {
+					console.log(error);
+				},
+				redirect: '/login',
+			});
 		}
 
 	},

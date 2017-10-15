@@ -6,21 +6,23 @@
 				<div class="md-title">
 					<h3>Apps</h3>
 				</div>
-				<md-button style=" background-color:#42f498;float:right ; margin-right:10px;" class="md-raised md-primary" @click="pushtocreatenewapp"><strong>+ new app</strong></md-button>
+				<md-button style=" background-color:#42f498;float:right ; margin-right:10px;" class="md-raised md-primary" @click="pushtocreatenewapp">
+					<strong>+ new app</strong>
+				</md-button>
 			</md-card-header>
 
 			<md-card-content>
 				<div v-if="payload.items.length < 1">
 					<h4>You have'nt created app yet &#128520;, click on new app to get started</h4>
-				</div>	
+				</div>
 				<div v-else>
-				<md-list>
-					<md-list-item v-for="item in payload.items" v-bind:data="item" v-bind:key="item.repositoryName" @click="(e)=> goToAppManagement(e,item)">
-						<md-icon>code</md-icon>
-						<p>{{item.repositoryName}}</p>
-						<p style="padding-left: 1em;padding-right: 1em;">{{item.language}}</p>
-					</md-list-item>
-				</md-list>
+					<md-list>
+						<md-list-item v-for="item in payload.items" v-bind:data="item" v-bind:key="item.repositoryName" @click="(e)=> goToAppManagement(e,item)">
+							<md-icon>code</md-icon>
+							<p>{{item.repositoryName}}</p>
+							<p style="padding-left: 1em;padding-right: 1em;">{{item.language}}</p>
+						</md-list-item>
+					</md-list>
 				</div>
 			</md-card-content>
 		</md-card>
@@ -80,7 +82,8 @@ export default {
 			makeRequest('/repositories', 'GET', null, null)
 				.then((result) => {
 					let res = result.res;
-					if (!result.error && res) {
+					console.log("Status", res.status)
+					if (!result.error && res && res.status == 200) {
 						this.$store.dispatch('setRepositoryItems', res.data);
 						this.payload.items = res.data;
 						this.payload.items.forEach(x => {
