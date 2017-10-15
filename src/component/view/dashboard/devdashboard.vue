@@ -88,10 +88,12 @@ export default {
 					if (!result.error && res && res.status == 200) {
 						this.$store.dispatch('setRepositoryItems', res.data);
 						this.payload.items = res.data;
-						this.payload.items.forEach(x => {
-							x.date = x.date.toDateString();
-						})
 						this.$store.dispatch('setIsProgressVisible', false);
+						if(res.data.length >0){
+								this.$store.dispatch('setFooterPosition', true);
+						}else{
+								this.$store.dispatch('setFooterPosition', false);
+						}
 					}
 				})
 				.catch(reject => console.log(reject));

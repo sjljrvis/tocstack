@@ -200,82 +200,68 @@
 					<span>#tweets</span>
 				</h3>
 				<md-layout md-gutter>
+
 					<md-layout class="twitter-card" md-align="center" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="50">
-						<md-card md-with-hover>
-							<md-card-media>
-								<img class='md-card-image' src="../../../assets/space.jpg" alt="People">
+						<md-layout md-column>
+							<md-card style="height:fit-content">
+								<md-card-header>
+									<md-avatar style='margin-left:0px'>
+										<img src="../../../assets/space.jpg" alt="Avatar">
+									</md-avatar>
+									<md-card-header-text>
+										<div class="md-title">Title goes here</div>
+										<div class="md-subhead"> antium quasi non,. Excepturi.
+										</div>
 
-								<md-ink-ripple></md-ink-ripple>
-							</md-card-media>
-							<md-card-header>
-								<div class="md-title">Title goes here</div>
-								<div class="md-subhead">Subtitle here</div>
-							</md-card-header>
+									</md-card-header-text>
+								</md-card-header>
+							</md-card>
+							<md-card style="height:fit-content">
+								<md-card-header>
+									<md-avatar style='margin-left:0px'>
+										<img src="../../../assets/space.jpg" alt="Avatar">
+									</md-avatar>
+									<md-card-header-text>
+										<div class="md-title">Title goes here</div>
+										<div class="md-subhead"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio itaque ea, nostrum odio. Dolores, sed accusantium quasi non, voluptas eius illo quas, saepe voluptate pariatur in deleniti minus sint. Excepturi.
+										</div>
 
-							<md-card-content>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio itaque ea, nostrum odio. Dolores, sed accusantium quasi non, voluptas eius illo quas, saepe voluptate pariatur in deleniti minus sint. Excepturi.
-							</md-card-content>
-							<md-card-actions>
-
-								<md-avatar style='margin-left:0px'>
-									<img src="../../../assets/space.jpg" alt="Avatar">
-								</md-avatar>
-								<md-button class="md-icon-button">
-									<md-icon>favorite</md-icon>
-								</md-button>
-
-								<md-button class="md-icon-button">
-									<md-icon>bookmark</md-icon>
-								</md-button>
-
-								<md-button class="md-icon-button">
-									<md-icon>share</md-icon>
-								</md-button>
-
-							</md-card-actions>
-
-						</md-card>
-
+									</md-card-header-text>
+								</md-card-header>
+							</md-card>
+						</md-layout>
 					</md-layout>
 
 					<md-layout class="twitter-card" md-align="center" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="50">
-						<md-card md-with-hover>
-							<md-card-media>
-								<img class='md-card-image' src="../../../assets/space.jpg" alt="People">
+						<md-layout md-column>
+							<md-card style="height:fit-content">
+								<md-card-header>
+									<md-avatar style='margin-left:0px'>
+										<img src="../../../assets/space.jpg" alt="Avatar">
+									</md-avatar>
+									<md-card-header-text>
+										<div class="md-title">Title goes here</div>
+										<div class="md-subhead"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio itaque ea, nostrum odio. Dolores, sed accusantium quasi non, voluptas eius illo quas, saepe voluptate pariatur in deleniti minus sint. Excepturi.
+										</div>
 
-								<md-ink-ripple></md-ink-ripple>
-							</md-card-media>
-							<md-card-header>
-								<div class="md-title">Title goes here</div>
-								<div class="md-subhead">Subtitle here</div>
-							</md-card-header>
+									</md-card-header-text>
+								</md-card-header>
+							</md-card>
+							<md-card style="height:fit-content">
+								<md-card-header>
+									<md-avatar style='margin-left:0px'>
+										<img src="../../../assets/space.jpg" alt="Avatar">
+									</md-avatar>
+									<md-card-header-text>
+										<div class="md-title">Title goes here</div>
+										<div class="md-subhead"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio itaque ea, nostrum odio. Dolores, sed accusantium quasi non, voluptas eius illo quas, saepe voluptate pariatur in deleniti minus sint. Excepturi.
+										</div>
 
-							<md-card-content>
-								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio itaque ea, nostrum odio. Dolores, sed accusantium quasi non, voluptas eius illo quas, saepe voluptate pariatur in deleniti minus sint. Excepturi.
-							</md-card-content>
-							<md-card-actions>
-
-								<md-avatar style='margin-left:0px'>
-									<img src="../../../assets/space.jpg" alt="Avatar">
-								</md-avatar>
-								<md-button class="md-icon-button">
-									<md-icon>favorite</md-icon>
-								</md-button>
-
-								<md-button class="md-icon-button">
-									<md-icon>bookmark</md-icon>
-								</md-button>
-
-								<md-button class="md-icon-button">
-									<md-icon>share</md-icon>
-								</md-button>
-
-							</md-card-actions>
-
-						</md-card>
-
+									</md-card-header-text>
+								</md-card-header>
+							</md-card>
+						</md-layout>
 					</md-layout>
-
 				</md-layout>
 
 			</div>

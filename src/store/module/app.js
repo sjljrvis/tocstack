@@ -7,6 +7,7 @@ const state = {
 	deviceType: deviceType.TABLET,
 	isProgressVisible: false,
 	translate3D: true,
+	setFooterPosition : false
 }
 
 const mutations = {
@@ -32,6 +33,9 @@ const mutations = {
 	SET_TRASLATE3D(state, payload) {
 		state.translate3D = payload;
 	},
+	SET_FOOTER_POSITION(state,payload){
+		state.setFooterPosition = payload;
+	}
 }
 
 const actions = {
@@ -50,6 +54,9 @@ const actions = {
 	setTranslate3d({ commit }, payload) {
 		commit('SET_TRASLATE3D', payload);
 	},
+	setFooterPosition({commit},payload){
+		commit('SET_FOOTER_POSITION', payload);
+	}
 }
 
 const getters = {
@@ -58,7 +65,8 @@ const getters = {
 	appContentMargin: state => state.contentMargin,
 	appDeviceType: state => state.deviceType,
 	appIsProgressVisible: state => state.isProgressVisible,
-	appTranslate3D: state => state.translate3D
+	appTranslate3D: state => state.translate3D,
+	appFooterPosition : state => state.setFooterPosition
 }
 
 

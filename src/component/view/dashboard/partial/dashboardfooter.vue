@@ -1,7 +1,7 @@
 
 <template>
 	<div>
-		<footer :style= setFooterPosition>
+		<footer :style= "setFooterPosition">
 			<div style='background-color : #d9d9dd ;color : #000000 '>
 				<div style="padding: 2% 2%;">
 					<md-layout md-gutter>
@@ -10,7 +10,7 @@
 								<div style="padding-left:20px;margin-top: 15px;">
 									<img style="color : #FFFFFF ;width :40px ; height : 40px; " src="../../../../assets/rocket.png">
 								</div>
-								<h3 style="padding-right:30px">tocstack</h3>	
+								<h3 style="padding-right:30px">tocstack</h3>
 								<h4 style="padding: 10px 10px 10px 10px;">Blogs</h4>
 								<h4 style="padding: 10px 10px 10px 10px;">Github</h4>
 								<h4 style="padding: 10px 10px 10px 10px;">Demo</h4>
@@ -45,10 +45,11 @@ export default {
 	data: () => ({
 	}),
 	beforeMount() {
+		this.setFooterPosition();
 	},
 	mounted() {
-    console.log(this.setFooterPosition())
-    this.setFooterPosition();
+		console.log("Bhai Bhai Bhai", this.setFooterPosition())
+
 	},
 	beforeDestroy() {
 	},
@@ -57,22 +58,22 @@ export default {
 	components: {
 	},
 	computed: {
+		setFooterPosition() {
+			console.log("Store", this.$store.getters.appFooterPosition)
+			if (this.$store.getters.appFooterPosition == true) {
+				return 'position: relative; bottom: 0px;width: 100%;'
+			}
+			else {
+				return 'position: fixed !important; bottom:0px !important;width: 100%;'
+			}
+		}
 	},
 	methods: {
 		pushToPage(route) {
 			this.$router.push({
 				path: `/${route}`, name: route,
 			})
-    },
-            setFooterPosition(){
-      let semicolon = ";"    
-      if(this.$store.getters.repositoryItems == undefined){
-        return 'position: fixed; bottom: 0;width: 100%;' 
-      }
-      else{
-         return 'position: relative; bottom: 0;width: 100%;' 
-      }
-    }
+		},
 	},
 }
 </script>
