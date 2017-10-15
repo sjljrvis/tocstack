@@ -1,5 +1,5 @@
 <template>
-	<div class='base-div'>
+	<div class='base-div' style="height:100% ">
 		<DashboardHeader></DashboardHeader>
 		<md-card md-with-hover class='dashboard-card'>
 			<md-card-header>
@@ -26,6 +26,7 @@
 				</div>
 			</md-card-content>
 		</md-card>
+    <DashboardFooter></DashboardFooter>
 	</div>
 </template>
 
@@ -33,6 +34,7 @@
 <script>
 import { makeRequest } from '../../../helper/internet';
 import DashboardHeader from './partial/dashboardheader.vue'
+import DashboardFooter from './partial/dashboardfooter.vue'
 export default {
 	data: () => ({
 		vertical: 'top',
@@ -59,7 +61,7 @@ export default {
 	destroyed() {
 	},
 	components: {
-		DashboardHeader
+		DashboardHeader,DashboardFooter
 	},
 	computed: {
 	},

@@ -4,6 +4,9 @@
 		<div style="padding-left: 37px;padding-right:37px">
 			<md-layout md-gutter>
 				<md-layout md-align="start" md-flex-xsmall="50" md-flex-small="50" md-flex-medium="50">
+					<div style="padding-left:20px;margin-top: 25px;">
+						<img style="color : #FFFFFF ;width :40px ; height : 40px; " src="../../../../assets/rocket.png">
+					</div>
 					<h3 style="color :#efefef !important;font-size:50px!important">
 						<strong>tocstack</strong>
 					</h3>
@@ -63,10 +66,10 @@ export default {
 		logoutUser() {
 			this.$auth.logout({
 				makeRequest: true,
-				success: function (res) {
+				success: function(res) {
 					location.reload();
 				},
-				error: function (error) {
+				error: function(error) {
 					console.log(error);
 				},
 				redirect: '/login',
