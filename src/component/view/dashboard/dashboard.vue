@@ -150,7 +150,7 @@
 			</div>
 		</div>
 
-		<div style='background-color : #142433 ;color : #FFFFFF ;'>
+		<div style=';background-color : rgba(19, 41, 78, 1) ;color : #FFFFFF ;'>
 			<div style='padding : 20px 20px 20px 20px'>
 				<a href="#" v-scroll-to="'#element5'">Scroll to #element 4</a>
 
@@ -195,7 +195,7 @@
 			<div style='padding : 10px 10px 10px 10px'>
 				<a href="#" v-scroll-to="'#element1'">Scroll to #element 1</a>
 				<h2>tocstack</h2>
-				<h3>
+				<h3 style = "text-align:center">
 					<span>Blogs</span>
 					<span>#tweets</span>
 				</h3>
@@ -210,7 +210,7 @@
 									</md-avatar>
 									<md-card-header-text>
 										<div class="md-title">Title goes here</div>
-										<div class="md-subhead"> antium quasi non,. Excepturi.
+										<div class="md-subhead"> antium quasi non,. Excepturi. consectetur adipisicing elit. Optio itaque ea, nostrum odio. Dolores, sed accusantium quasi non, voluptas eius illo quas, saepe voluptate pariatur in deleniti minus sint
 										</div>
 
 									</md-card-header-text>

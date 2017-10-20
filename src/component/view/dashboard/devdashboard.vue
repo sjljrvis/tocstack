@@ -13,7 +13,7 @@
 
 			<md-card-content>
 				<div v-if="payload.items.length < 1">
-					<h4>You have'nt created app yet &#128520;, click on new app to get started</h4>
+					<h4>You have'nt created app yet  &#x2639;, click on new app to get started</h4>
 				</div>
 				<div v-else>
 					<md-list>
