@@ -89,21 +89,27 @@
 		<div style=';background-color :  #ffffff ;color : #000000 '>
 			<div style="padding: 10% 0;">
 				<md-layout md-gutter>
-					<md-layout class="twitter-card" md-align="center" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="50">
+					<md-layout class="twitter-card" md-align="center" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="50"  md-flex-large="50">
 						<img class='code-snippet' src='../../../assets/terminal.png'></img>
+						<!-- <img class='code-snippet' src='../../../assets/code1.png'></img> -->
 					</md-layout>
 
-					<md-layout class="twitter-card" md-align="center" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="50" md-vertical-align="center">
-						<h2 style="color :#000000 !important ; font-size : 3em !important;text-align : center">Deploy with </h2>
-						<h2 style="color :#ff5722 !important ; font-size : 3em !important;text-align : center">&nbsp; git </h2>
-
+					<md-layout class="twitter-card" md-align="center" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="50"  md-flex-large="50" md-vertical-align="center">
+						<md-layout md-column>
+						<!-- <h2 style="color :#000000 !important ; font-size : 2em !important;text-align : center">Deploy with </h2> -->
+						<h2 style="color :#ff5722 !important ; font-size : 35px !important;text-align : center">Deploy with git </h2>
+						<p style="font-size : 25px ; margin-top: 0px;margin-bottom: 0px;">Automated deployment goodness, just git push to see your app/service online
+						</p> 
+						<div>
 						<ul>
-							<li style="color : #000000 !important; font-size : 38px ;">git init</li>
-							<li style="color : #000000 !important; font-size : 38px ;"> git add --all</li>
-							<li style="color : #000000 !important; font-size : 38px ;"> git commit -m"message"</li>
-							<li style="color : #000000 !important; font-size : 38px ;"> git push tocstack master</li>
+							<li style="color : #000000 !important; font-size : 20px ;"> git init</li>
+							<li style="color : #000000 !important; font-size : 20px ;"> git add --all</li>
+							<li style="color : #000000 !important; font-size : 20px ;"> git commit -m"message"</li>
+							<li style="color : #000000 !important; font-size : 20px ;"> git push tocstack master</li>
 						</ul>
-
+						</div>
+							<!-- <p style="font-size : 1.2em ;">git init<br>git add --all<br>git commit -m"message"<br>git commit -m"message"</p> -->
+						</md-layout>
 					</md-layout>
 
 				</md-layout>
@@ -270,7 +276,7 @@
 
 		<!-- footer -->
 		<Tocstackfooter></Tocstackfooter>
-
+		<!-- footer -->
 	</div>
 </template>
 

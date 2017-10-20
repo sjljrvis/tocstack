@@ -1,91 +1,130 @@
 <template>
-  <div class="login-div">
-    <h1 style="color :#efefef !important;font-size:4.5em;text-align:center">tocstack</h1>
-    <div>
-      <md-card>
-        <md-card-area>
-          <md-card-header>
-            <div class="md-title">Create new app</div>
-          </md-card-header>
+	<div class="base-div">
+		<DashboardHeader></DashboardHeader>
+		<div class="login-div">
+			<md-card>
+				<md-card-area>
+					<md-card-header>
+						<div class="md-title">Create new app</div>
+					</md-card-header>
+					<md-card-content>
+						<form style="width:350px">
+							<md-input-container>
+								<md-icon>widgets</md-icon>
+								<label> App name</label>
+								<md-input type="text" v-model="payload.repositoryName" ref="repositoryName"></md-input>
+							</md-input-container>
 
-          <md-card-content>
-            <form style="width:350px">
-              <md-input-container>
-                <md-icon>widgets</md-icon>
-                <label> App name</label>
-                <md-input type="text" v-model="payload.email" ref="username"></md-input>
-              </md-input-container>
+							<md-input-container>
+								<md-icon>language</md-icon>
+								<label>Choose a language</label>
+								<md-select  style="width:350px !important" required v-model="payload.language">
+									<md-option value="nodeJS">nodeJS</md-option>
+									<md-option value="python">python</md-option>
+									<md-option value="ruby">Ruby</md-option>
+									<md-option value="go">Go</md-option>
+								</md-select>
+							</md-input-container>
+						</form>
 
-              <md-input-container>
-                <md-icon>language</md-icon>
-                <label>Choose a language</label>
-                <md-select style="width:350px !important" required v-model="payload.category">
-                  <md-option value="foodsandcafe">nodeJS</md-option>
-                  <md-option value="lifestyle">python</md-option>
-                  <md-option value="beautyandsaloon">Ruby</md-option>
-                  <md-option value="electronics">Go</md-option>
-                </md-select>
+					</md-card-content>
+				</md-card-area>
 
-                <md-input type="password" v-model="payload.password" ref="password"></md-input>
-              </md-input-container>
-            </form>
+				<md-card-actions>
+					<md-button  style="width : auto !important ; font-weight:400 ; font-size:inherit" class="md-raised md-warn" @click="createNewRepository">Create</md-button>
+				</md-card-actions>
+			</md-card>
 
-          </md-card-content>
-        </md-card-area>
+			<md-dialog-confirm ref="confirm_dailog" :md-title="error.title" :md-content-html="error.message" :md-ok-text="error.okText" :md-cancel-text="error.cancelText" @open="onOpen" @close="onClose">
+			</md-dialog-confirm>
+		</div>
 
-        <md-card-actions>
-          <md-button  style="width : auto !important ; font-weight:400 ; font-size:inherit" class="md-raised md-warn" @click="login">Create</md-button>
-        </md-card-actions>
-      </md-card>
+		<md-snackbar :md-position="snackBar.vertical + ' ' + snackBar.horizontal" ref="snackbar" :md-duration="snackBar.duration">
+		<p style="color:#ffffff">App with this name already exists . Please choose another one</p>
+		<md-button class="md-warn" @click="$refs.snackbar.close()">close</md-button>
+	</md-snackbar>
 
-      <md-dialog-confirm ref="confirm_dailog" :md-title="error.title" :md-content-html="error.message" :md-ok-text="error.okText" :md-cancel-text="error.cancelText" @open="onOpen" @close="onClose">
-      </md-dialog-confirm>
-    </div>
+		<div>
+			<footer style= "position: fixed !important; bottom:0px !important;width: 100%;">
+			<div style='background-color : rgba(19, 41, 78, 1) ;color : #ffffff '>
+				<div style="padding: 2% 2%;">
+					<md-layout md-gutter>
+						<md-layout md-align="center" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="70" md-flex-large="70">
+							<md-layout md-row>
+								<div style="padding-left:20px;margin-top: 15px;">
+									<img style="color : #FFFFFF ;width :40px ; height : 40px; " src="../../../../assets/rocket.png">
+								</div>
+								<h3 style="padding-right:30px">tocstack</h3>
+								<h4 style="padding: 10px 10px 10px 10px;">Blogs</h4>
+								<h4 style="padding: 10px 10px 10px 10px;">Github</h4>
+								<h4 style="padding: 10px 10px 10px 10px;">Demo</h4>
+							</md-layout>
+						</md-layout>
 
-  </div>
+						<md-layout style="margin-top: 15px !important;" md-align="end" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="30" md-flex-large="30">
+							<md-layout md-row style="justify-content:flex-end;margin-right:120px">
+								<div style="padding-left:20px">
+									<img style="color : #FFFFFF ;width :40px ; height : 40px; " src="../../../../assets/git1.png">
+								</div>
+								<div style="padding-left:20px">
+									<img style="color : #FFFFFF ;width :40px ; height : 40px;  " src="../../../../assets/twitter.png">
+								</div>
+								<div style="padding-left:20px">
+									<img style="color : #FFFFFF ;width :40px ; height : 40px; " src="../../../../assets/slack.png">
+								</div>
+							</md-layout>
+						</md-layout>
+
+					</md-layout>
+				</div>
+			</div>
+		</footer>
+		</div>	
+	</div>
 </template>
 
 
 <script>
+import { makeRequest } from "../../../../helper/internet.js";
+import DashboardHeader from "../partial/dashboardheader.vue";
+import DashboardFooter from "../partial/dashboardfooter.vue";
 
 export default {
   beforeMount() {
-    this.$store.dispatch('setCurrentRoute', '/login');
+    this.$store.dispatch("setCurrentRoute", "/login");
   },
   mounted() {
     if (this.$auth.redirect()) {
-      this.redirect = this.$auth.redirect().from.name
+      this.redirect = this.$auth.redirect().from.name;
     }
   },
-  beforeDestroy() {
-
-  },
-  destroyed() {
-
-  },
+  beforeDestroy() {},
+  destroyed() {},
 
   data() {
     return {
       payload: {
-        email: '',
-        password: '',
-        rememberMe: false,
-        redirect: ''
+        repositoryName: "",
+        language: ""
       },
       error: {
-        title: 'Something went wrong',
-        message: 'All fields are required. Fill in all details before login',
-        okText: 'OK',
-        cancelText: 'CANCEL'
+        title: "Something went wrong",
+        message: "All fields are required. Fill in all details before login",
+        okText: "OK",
+        cancelText: "CANCEL"
+      },
+      snackBar: {
+        vertical: "top",
+        horizontal: "center",
+        duration: 10000
       }
-    }
+    };
   },
   components: {
-
+    DashboardHeader,
+    DashboardFooter
   },
-  computed: {
-
-  },
+  computed: {},
   methods: {
     openDialog() {
       this.$refs.confirm_dailog.open();
@@ -93,41 +132,32 @@ export default {
     closeDialog() {
       this.$refs.confirm_dailog.close();
     },
-    onOpen() {
-
+    onOpen() {},
+    onClose(type) {},
+    pushToDevdashboard() {
+      this.$router.push({
+        path: `/devdashboard`,
+        name: `devdashboard`
+      });
     },
-    onClose(type) {
-
-    },
-    login() {
-      const { email, password, rememberMe, redirect } = this.payload;
-      const _redirect = (redirect != null && redirect != '') ? redirect : '/devdashboard';
-      if (email && password && password.length > 3) {
-        this.$store.dispatch('setIsProgressVisible', true);
-        this.$auth.login({
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          data: {
-            email,
-            password
-          },
-          rememberMe: rememberMe,
-          redirect: _redirect,
-          success(res) {
-            this.$store.dispatch('setIsProgressVisible', false);
-            console.log(res)
-          },
-          error(error) {
-            this.$store.dispatch('setIsProgressVisible', false);
+    createNewRepository() {
+      const { repositoryName, language } = this.payload;
+      const payloadRepository = { repositoryName, language };
+      makeRequest("/createrepository", "POST", null, payloadRepository)
+        .then(result => {
+          let res = result.res;
+          console.log("Status", res.data.status);
+          if (res.data.status != "true") {
+            console.log(payloadRepository);
+            this.$refs.snackbar.open();
+          } else {
+						this.pushToDevdashboard();
           }
         })
-      } else {
-        this.openDialog();
-      }
+        .catch(reject => console.log(reject));
     }
   }
-}
+};
 </script>
 
 

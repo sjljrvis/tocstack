@@ -84,12 +84,12 @@ export default {
 			makeRequest('/repositories', 'GET', null, null)
 				.then((result) => {
 					let res = result.res;
-					console.log("Status", res.status)
+					console.log("Status", res.data.length)
 					if (!result.error && res && res.status == 200) {
 						this.$store.dispatch('setRepositoryItems', res.data);
 						this.payload.items = res.data;
 						this.$store.dispatch('setIsProgressVisible', false);
-						if(res.data.length >0){
+						if(res.data.length >=4){
 								this.$store.dispatch('setFooterPosition', true);
 						}else{
 								this.$store.dispatch('setFooterPosition', false);

@@ -2,7 +2,7 @@
 <template>
 	<div>
 		<footer :style= "setFooterPosition">
-			<div style='background-color : #d9d9dd ;color : #000000 '>
+			<div style='background-color : rgba(19, 41, 78, 1) ;color : #ffffff '>
 				<div style="padding: 2% 2%;">
 					<md-layout md-gutter>
 						<md-layout md-align="center" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="70" md-flex-large="70">
@@ -18,15 +18,15 @@
 						</md-layout>
 
 						<md-layout style="margin-top: 15px !important;" md-align="end" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="30" md-flex-large="30">
-							<md-layout md-row>
+							<md-layout md-row style="justify-content:flex-end;margin-right:120px">
 								<div style="padding-left:20px">
-									<img style="color : #FFFFFF ;width :40px ; height : 40px; " src="../../../../assets/github.png">
+									<img style="color : #FFFFFF ;width :40px ; height : 40px; " src="../../../../assets/git1.png">
 								</div>
 								<div style="padding-left:20px">
 									<img style="color : #FFFFFF ;width :40px ; height : 40px;  " src="../../../../assets/twitter.png">
 								</div>
 								<div style="padding-left:20px">
-									<img style="color : #FFFFFF ;width :40px ; height : 40px; " src="../../../../assets/facebook1.png">
+									<img style="color : #FFFFFF ;width :40px ; height : 40px; " src="../../../../assets/slack.png">
 								</div>
 							</md-layout>
 						</md-layout>
