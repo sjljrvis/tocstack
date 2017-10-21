@@ -119,7 +119,8 @@ export default {
 					rememberMe: rememberMe,
 					redirect: _redirect,
 					success(res) {
-					
+					 this.$browserStore.set('userEmail',res.data.email);
+					 this.$browserStore.set('userName',res.data.userName);
 					},
 					error(error) {
 						this.$store.dispatch('setIsProgressVisible', false);

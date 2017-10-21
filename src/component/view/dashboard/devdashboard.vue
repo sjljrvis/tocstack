@@ -48,6 +48,7 @@ export default {
 
 	}),
 	beforeMount() {
+		this.$store.dispatch("setCurrentRoute", "/devdashboard");
 		this.clearRepositoryItem();
 	},
 	mounted() {

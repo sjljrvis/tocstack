@@ -45,7 +45,7 @@
 	</md-snackbar>
 
 		<div>
-			<footer style= "position: fixed !important; bottom:0px !important;width: 100%;">
+		<footer style= "position: fixed !important; bottom:0px !important;width: 100%;">
 			<div style='background-color : rgba(19, 41, 78, 1) ;color : #ffffff '>
 				<div style="padding: 2% 2%;">
 					<md-layout md-gutter>
@@ -151,7 +151,7 @@ export default {
             console.log(payloadRepository);
             this.$refs.snackbar.open();
           } else {
-						this.pushToDevdashboard();
+            this.pushToDevdashboard();
           }
         })
         .catch(reject => console.log(reject));

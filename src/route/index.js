@@ -48,7 +48,11 @@ export default new VueRouter({
 			path: '/blog' ,
 			component: require('../component/view/dashboard/blog.vue')
 		},
-
+		{ 
+			name : 'profile', 
+			path: '/profile' ,
+			component: require('../component/view/dashboard/user/profile.vue')
+		},
 		//import all sidebar items route
 		...getSidebarRoutes(),
 	]

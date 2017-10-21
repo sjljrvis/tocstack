@@ -18,7 +18,21 @@
 								<img md-menu-trigger src="../../../../assets/sejal.png" alt="People">
 							</md-avatar>
 							<md-menu-content style="width:auto !important;">
-								<md-menu-item @click="pushToPage('devdashboard')">
+								<md-menu-item @click="pushToPage('profile')">
+									<md-card style="box-shadow:none !important;width:250px">
+											<md-card-header>
+												<md-avatar style="margin-left:40%">
+														<img src="../../../../assets/sejal.png" alt="Avatar">
+												</md-avatar>
+											</md-card-header>
+											<md-card-content>
+												<h4 style="font-size : 1em ;text-align:center">{{userName}}</h4>
+												<h5 style="font-size : 1em ;text-align:center"><span>{{userEmail}}</span></h5>
+											</md-card-content>
+										</md-card>
+
+								</md-menu-item>
+								<md-menu-item @click="pushToPage('profile')">
 									<md-icon>account_circle</md-icon>
 									<span>Profile &nbsp;&nbsp;</span>
 								</md-menu-item>
@@ -41,41 +55,40 @@
 
 
 <script>
-import { makeRequest } from '../../../../helper/internet.js';
+import { makeRequest } from "../../../../helper/internet.js";
 export default {
-	data: () => ({
-	}),
-	beforeMount() {
-	},
-	mounted() {
-	},
-	beforeDestroy() {
-	},
-	destroyed() {
-	},
-	components: {
-	},
-	computed: {
-	},
-	methods: {
-		pushToPage(route) {
-			this.$router.push({
-				path: `/${route}`, name: route,
-			})
-		},
-		logoutUser() {
-			this.$auth.logout({
-				makeRequest: true,
-				success: function(res) {
-					location.reload();
-				},
-				error: function(error) {
-					console.log(error);
-				},
-				redirect: '/login',
-			});
-		}
-
-	},
-}
+  data: () => ({
+    userName: "",
+    userEmail: ""
+  }),
+  beforeMount() {},
+  mounted() {
+    this.userName = this.$browserStore.get("userName");
+    this.userEmail = this.$browserStore.get("userEmail");
+  },
+  beforeDestroy() {},
+  destroyed() {},
+  components: {},
+  computed: {},
+  methods: {
+    pushToPage(route) {
+      this.$router.push({
+        path: `/${route}`,
+        name: route
+      });
+    },
+    logoutUser() {
+      this.$auth.logout({
+        makeRequest: true,
+        success: function(res) {
+          location.reload();
+        },
+        error: function(error) {
+          console.log(error);
+        },
+        redirect: "/login"
+      });
+    }
+  }
+};
 </script>

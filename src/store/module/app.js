@@ -7,7 +7,7 @@ const state = {
 	deviceType: deviceType.TABLET,
 	isProgressVisible: false,
 	translate3D: true,
-	setFooterPosition : false
+	setFooterPosition : false,
 }
 
 const mutations = {
@@ -66,7 +66,7 @@ const getters = {
 	appDeviceType: state => state.deviceType,
 	appIsProgressVisible: state => state.isProgressVisible,
 	appTranslate3D: state => state.translate3D,
-	appFooterPosition : state => state.setFooterPosition
+	appFooterPosition : state => state.setFooterPosition,
 }
 
 

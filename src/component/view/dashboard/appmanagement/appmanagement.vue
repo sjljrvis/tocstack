@@ -52,6 +52,7 @@ export default {
 	}),
 	beforeMount() {
 		let item = this.$route.params.item;
+		this.$store.dispatch("setCurrentRoute", "/appmanagement");
 		if (item === undefined) {
 			this.$router.push({
 				path: '/devdashboard', name: 'devdashboard',
