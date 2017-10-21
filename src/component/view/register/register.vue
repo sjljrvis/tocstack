@@ -1,7 +1,7 @@
 <template>
 	<div style ="height:100vh;background:url(https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/ruoEhTkNeiwq2lefr/videoblocks-rocket-space-ship-take-off-and-flying-to-space-cartoon-flat-animation-in-4k-strat-up-business-concept-motion-graphics-for-yours-presentation-isolated-on-black-background_h_ndrebgw_thumbnail-full11.png) center/cover no-repeat">
 		<div>
-			<h3 style="color :#efefef !important;font-size:90px!important;margin-top:0px !important;text-align:center"><strong>tocstack</strong></h3>
+			<h3 style="color :#efefef !important;font-size:90px!important;margin-top:0px !important;margin-left:11px !important;text-align:center"><strong>tocstack</strong></h3>
 			<md-layout md-gutter>
 		  <md-layout md-flex-xsmall="0" md-flex-small="0" md-flex-medium="33" md-vertical-align="center">
 			</md-layout>	
@@ -34,7 +34,7 @@
 										<label>Username</label>
 										<md-input type="text" v-model="payload.email" ref="username"></md-input>
 									</md-input-container>
-									
+
 									<md-input-container>
 										<md-icon>remove_red_eye</md-icon>
 										<label>Password</label>
