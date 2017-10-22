@@ -76,7 +76,7 @@
 					<md-layout md-align="center" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="80" md-flex-large="80" md-vertical-align="start">
 					<md-layout md-column>
 						<div style="text-align:center">
-						<md-button style="background-color:#ff0000;color:#ffffff;margin-left:15%;margin-right:15%;width:auto"class="md-raised ">Delete account</md-button>
+						<md-button style="background-color:#ff0000;color:#ffffff;margin-left:15%;margin-right:15%;width:auto"class="md-raised " @click="deleteUser">Delete account</md-button>
 						</div>
 					</md-layout>
 					</md-layout>
@@ -85,6 +85,10 @@
 			</md-card-content>
 		</md-card>
 		<DashboardFooter></DashboardFooter>
+		<md-snackbar :md-position="snackBar.vertical + ' ' + snackBar.horizontal" ref="snackbar" :md-duration="snackBar.duration">
+		<p style="color:#ffffff">App with this name already exists . Please choose another one</p>
+		<md-button class="md-warn" @click="$refs.snackbar.close()">close</md-button>
+	</md-snackbar>
 	</div>
 </template>
 
@@ -96,7 +100,11 @@ import DashboardFooter from "../partial/dashboardfooter.vue";
 
 export default {
   beforeMount() {
-    this.$store.dispatch("setCurrentRoute", "/profiles");
+		this.$store.dispatch("setCurrentRoute", "/profiles");
+		if(this.$browserStore.get("userName") == null)
+		{
+			this.pushToLoginPage();
+		}
   },
   mounted() {
     this.user.userName = this.$browserStore.get("userName");
@@ -141,11 +149,38 @@ export default {
     },
     onOpen() {},
     onClose(type) {},
-    pushToDevdashboard() {
+    pushToLoginPage() {
       this.$router.push({
-        path: `/devdashboard`,
-        name: `devdashboard`
+        path: `/login`,
+        name: `Login`
       });
+    },
+    logoutUser() {
+      this.$auth.logout({
+        makeRequest: true,
+        success: function(res) {
+          location.reload();
+        },
+        error: function(error) {
+          console.log(error);
+        },
+        redirect: "/login"
+      });
+    },
+    deleteUser() {
+      makeRequest(`/admin/deleteuser/${this.user.userName}`, "POST", null, {})
+        .then(result => {
+          let res = result.res;
+          console.log("Status", res.data.status);
+          if (res.data.status != "true") {
+            this.$refs.snackbar.open();
+          } else {
+            this.$browserStore.remove("userEmail");
+            this.$browserStore.remove("userName");
+            this.logoutUser();
+          }
+        })
+        .catch(reject => console.log(reject));
     }
   }
 };

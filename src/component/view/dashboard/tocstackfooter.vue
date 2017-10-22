@@ -40,7 +40,7 @@
 				</div>
 		</div>
 		<div style = "margin : 10px 10px 10px 10px">
-			<h6 style="color : #FFFFFF !important ;margin-top : 10px ;margin-bottom : 10px ;text-align:center"> &copy; 2017 &nbsp;&nbsp;tocstack.com All rights reserved</h6>
+			<h6 style="color : #FFFFFF !important ;margin-top : 10px ;margin-bottom : 10px ;text-align:center"> &copy; 2017 &nbsp;&nbsp;tocstack.com &nbsp;All rights reserved</h6>
 		</div>
 	</div>
 </template>
