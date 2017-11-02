@@ -2,7 +2,7 @@
   <div>
     <md-layout md-gutter>
       <md-layout md-flex-xsmall="100" md-flex-small="100" md-flex-medium="50" md-align="center">
-        <h3>App Status</h3>
+        <h4>App Status</h4>
       </md-layout>
       <md-layout md-flex-xsmall="100" md-flex-small="100" md-flex-medium="50" md-vertical-align="center" md-align="start">
 
@@ -30,7 +30,7 @@
 
     <md-layout md-gutter>
       <md-layout md-flex-xsmall="100" md-flex-small="100" md-flex-medium="50" md-align="center">
-        <h3>View Logs</h3>
+        <h4>View Logs</h4>
       </md-layout>
       <md-layout md-flex-xsmall="100" md-flex-small="100" md-flex-medium="50" md-vertical-align="center" md-align="start">
         <md-layout md-column>
@@ -54,7 +54,7 @@
 
     <md-layout md-gutter>
       <md-layout md-flex-xsmall="100" md-flex-small="100" md-flex-medium="50" md-align="center">
-        <h3>View Commits</h3>
+        <h4>View Commits</h4>
       </md-layout>
       <md-layout md-flex-xsmall="100" md-flex-small="100" md-flex-medium="50" md-vertical-align="center" md-align="start">
         <md-layout md-column>

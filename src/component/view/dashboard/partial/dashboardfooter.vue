@@ -2,7 +2,7 @@
 <template>
 	<div>
 		<footer :style= "setFooterPosition">
-			<div style='background-color : rgba(19, 41, 78, 1) ;color : #ffffff '>
+			<div style='background-color : #ffffff ;color : #ffffff '>
 				<div style="padding: 2% 2%;">
 					<md-layout md-gutter>
 						<md-layout md-align="center" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="70" md-flex-large="70">
@@ -10,10 +10,10 @@
 								<div style="padding-left:20px;margin-top: 15px;">
 									<img style="color : #FFFFFF ;width :40px ; height : 40px; " src="../../../../assets/rocket.png">
 								</div>
-								<h3 style="padding-right:30px">tocstack</h3>
-								<h4 style="padding: 10px 10px 10px 10px;">Blogs</h4>
-								<h4 style="padding: 10px 10px 10px 10px;">Github</h4>
-								<h4 style="padding: 10px 10px 10px 10px;">Demo</h4>
+								<h3 style="padding-right:30px ;color : #000000 !important">tocstack</h3>
+								<h4 style="padding: 10px 10px 10px 10px;color : #000000 !important">Blogs</h4>
+								<h4 style="padding: 10px 10px 10px 10px;color : #000000 !important">Github</h4>
+								<h4 style="padding: 10px 10px 10px 10px;color : #000000 !important">Demo</h4>
 							</md-layout>
 						</md-layout>
 
@@ -40,48 +40,45 @@
 
 
 <script>
-import { makeRequest } from '../../../../helper/internet.js';
+import { makeRequest } from "../../../../helper/internet.js";
 export default {
-	data: () => ({
-	}),
-	beforeMount() {
-		this.setFooterPosition();
-	},
-	mounted() {
-		console.log(this.$store.getters)
-	},
-	beforeDestroy() {
-	},
-	destroyed() {
-	},
-	components: {
-	},
-	computed: {
-		setFooterPosition() {
-			console.log("Store", this.$store.getters.appFooterPosition)
-			if (this.$store.getters.appFooterPosition == true) {
-				return 'position: relative; bottom: 0px;width: 100%;'
-			}
-			else if(this.$store.getters.appDeviceType == "Phone"){
-				console.log("check1")
-				return 'position: relative; bottom: 0px;width: 100%;'
-			}
-			else if(this.$store.getters.appCurrentRoute != "/devdashboard" && this.$store.getters.appDeviceType != "Phone"){
-				console.log("check2")
-				return 'position: relative; bottom: 0px;width: 100%;'
-			}
-			else {
-					console.log("check3")
-				return 'position: fixed !important; bottom:0px !important;width: 100%;'
-			}
-		}
-	},
-	methods: {
-		pushToPage(route) {
-			this.$router.push({
-				path: `/${route}`, name: route,
-			})
-		},
-	},
-}
+  data: () => ({}),
+  beforeMount() {
+    this.setFooterPosition();
+  },
+  mounted() {
+    console.log(this.$store.getters);
+  },
+  beforeDestroy() {},
+  destroyed() {},
+  components: {},
+  computed: {
+    setFooterPosition() {
+      console.log("Store", this.$store.getters.appFooterPosition);
+      if (this.$store.getters.appFooterPosition == true) {
+        return "position: relative; bottom: 0px;width: 100%;";
+      } else if (this.$store.getters.appDeviceType == "Phone") {
+        console.log("check1");
+        return "position: relative; bottom: 0px;width: 100%;";
+      } else if (
+        this.$store.getters.appCurrentRoute != "/devdashboard" &&
+        this.$store.getters.appDeviceType != "Phone"
+      ) {
+        console.log("check2");
+        return "position: relative; bottom: 0px;width: 100%;";
+      } else {
+        console.log("check3");
+        return "position: fixed !important; bottom:0px !important;width: 100%;";
+      }
+    }
+  },
+  methods: {
+    pushToPage(route) {
+      this.$router.push({
+        path: `/${route}`,
+        name: route
+      });
+    }
+  }
+};
 </script>

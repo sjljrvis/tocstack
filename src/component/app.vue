@@ -83,7 +83,8 @@ body {
 	font-family: 'Dosis', sans-serif;
 	font-size: 20px;
 	line-height: 1.42857;
-	background-color:rgba(19, 41, 78, 1)
+	background-color:#ffffff
+	/* background-color:rgba(19, 41, 78, 1) */
 }
 
 .content-div {
@@ -239,9 +240,11 @@ text-align: left;
 }
 
 span {
-	color: #ff5722;
+	color: #000000;
 }
-
+.md-tabs-navigation .md-tab-indicator {
+    background-color: #ff5722 !important;
+}
 h2 {
 	font-size: 45px !important;
 	margin-top: 20px !important;
@@ -278,6 +281,22 @@ h3 {
 
 h4 {
 	font-size: 20px !important;
+	margin-top: 20px !important;
+
+	margin-bottom: 10px !important;
+
+	font-family: inherit !important;
+
+	font-weight: 500 !important;
+
+	line-height: 1.1 !important;
+
+	color: inherit !important;
+
+	/* text-align: center !important */
+}
+h5 {
+	font-size: 15px !important;
 	margin-top: 20px !important;
 
 	margin-bottom: 10px !important;

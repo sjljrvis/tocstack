@@ -46,7 +46,7 @@
 
 		<div>
 		<footer style= "position: fixed !important; bottom:0px !important;width: 100%;">
-			<div style='background-color : rgba(19, 41, 78, 1) ;color : #ffffff '>
+			<div style='background-color :  #ffffff  ;color : #ffffff '>
 				<div style="padding: 2% 2%;">
 					<md-layout md-gutter>
 						<md-layout md-align="center" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="70" md-flex-large="70">
@@ -54,10 +54,10 @@
 								<div style="padding-left:20px;margin-top: 15px;">
 									<img style="color : #FFFFFF ;width :40px ; height : 40px; " src="../../../../assets/rocket.png">
 								</div>
-								<h3 style="padding-right:30px">tocstack</h3>
-								<h4 style="padding: 10px 10px 10px 10px;">Blogs</h4>
-								<h4 style="padding: 10px 10px 10px 10px;">Github</h4>
-								<h4 style="padding: 10px 10px 10px 10px;">Demo</h4>
+								<h3 style="padding-right:30px ;color : #000000 !important">tocstack</h3>
+								<h4 style="padding: 10px 10px 10px 10px;color : #000000 !important">Blogs</h4>
+								<h4 style="padding: 10px 10px 10px 10px;color : #000000 !important">Github</h4>
+								<h4 style="padding: 10px 10px 10px 10px;color : #000000 !important">Demo</h4>
 							</md-layout>
 						</md-layout>
 

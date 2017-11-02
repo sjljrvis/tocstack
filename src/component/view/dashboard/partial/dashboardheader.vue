@@ -7,8 +7,8 @@
 					<div style="padding-left:20px;margin-top: 25px;">
 						<img style="color : #FFFFFF ;width :40px ; height : 40px; " src="../../../../assets/rocket.png">
 					</div>
-					<h3 style="color :#efefef !important;font-size:50px!important">
-						<strong>tocstack</strong>
+					<h3 style="color :#000000 !important;font-size:40px!important;font-weight: 400 !important;">
+						tocstack
 					</h3>
 				</md-layout>
 				<md-layout md-align="end" md-flex-xsmall="50" md-flex-small="50" md-flex-medium="50">
@@ -27,7 +27,7 @@
 											</md-card-header>
 											<md-card-content>
 												<h4 style="font-size : 1em ;text-align:center">{{userName}}</h4>
-												<h5 style="font-size : 1em ;text-align:center"><span>{{userEmail}}</span></h5>
+												<h5 style="font-size : 1em ;text-align:center;color:#ff5722 !important"><span>{{userEmail}}</span></h5>
 											</md-card-content>
 										</md-card>
 

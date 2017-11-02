@@ -1,7 +1,7 @@
 <template>
 	
 		<!-- footer -->
-		<div>
+		<div style ="background-color : rgba(19, 41, 78, 1)">
 			<div style=';padding: 2% 0;background-color : rgba(19, 41, 78, 1);color : #efefef; text-align: center;' >
 				<div style='padding : 10px 10px 10px 10px'>
 					<md-layout md-gutter>
@@ -39,8 +39,8 @@
 					</md-layout>
 				</div>
 		</div>
-		<div style = "margin : 10px 10px 10px 10px">
-			<h6 style="color : #FFFFFF !important ;margin-top : 10px ;margin-bottom : 10px ;text-align:center"> &copy; 2017 &nbsp;&nbsp;tocstack.com &nbsp;All rights reserved</h6>
+		<div style = "background-color : rgba(19, 41, 78, 1);margin : 10px 0px 10px 10px">
+			<h6 style="color : #FFFFFF !important ;margin-top : 10px ;margin-bottom : 0px ;text-align:center"> &copy; 2017 &nbsp;&nbsp;tocstack.com &nbsp;All rights reserved</h6>
 		</div>
 	</div>
 </template>

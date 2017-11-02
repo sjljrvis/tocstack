@@ -4,10 +4,9 @@
     <md-layout md-gutter style="padding-top:10px">
 
       <md-layout md-align="left" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="75" style="padding-right : 10px !important ;padding-left : 10px !important">
-        <div style="background : #efefef">
+        <div style="background : #ffffff">
           <div style="padding : 10px 10px 10px 10px">
-            <h3>Install the Heroku CLI</h3>
-            <h4>If you haven't already, log in to your Heroku account and follow the prompts to create a new SSH public key.</h4>
+            <h4>Install the Heroku CLI</h4>
             </br>
           </div>
         </div>
@@ -30,9 +29,9 @@
     <md-layout md-gutter style="padding-top:10px">
 
       <md-layout md-align="left" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="75" style="padding-right : 10px !important ;padding-left : 10px !important">
-        <div style="background : #efefef">
+        <div style="background : #ffffff">
           <div style="padding : 10px 10px 10px 10px">
-            <h3>Create a new Git repository</h3>
+            <h4>Create a new Git repository</h4>
             <h4>Initialize a git repository in a new or existing directory</h4>
             </br>
           </div>
@@ -60,9 +59,9 @@
     <md-layout md-gutter style="padding-top:10px">
 
       <md-layout md-align="left" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="75" style="padding-right : 10px !important ;padding-left : 10px !important">
-        <div style="background : #efefef">
+        <div style="background : #ffffff">
           <div style="padding : 10px 10px 10px 10px">
-            <h3>Deploy your changes</h3>
+            <h4>Deploy your changes</h4>
             <h4>Make some changes to the code you just cloned and deploy them to Heroku using Git.</h4>
             </br>
           </div>
@@ -94,9 +93,9 @@
     <md-layout md-gutter style="padding-top:10px">
 
       <md-layout md-align="left" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="75" style="padding-right : 10px !important ;padding-left : 10px !important">
-        <div style="background : #efefef">
+        <div style="background : #ffffff">
           <div style="padding : 10px 10px 10px 10px">
-            <h3>Existing Git repository</h3>
+            <h4>Existing Git repository</h4>
             <h4>For existing repositories, simply add the heroku remote</h4>
             </br>
           </div>

@@ -4,52 +4,52 @@
     <md-layout md-gutter>
 
       <md-layout md-flex-xsmall="100" md-flex-small="100" md-flex-medium="50" md-vertical-align="center" md-align="center">
-        <h3>Name</h3>
+        <h4>Name</h4>
       </md-layout>
       <md-layout md-flex-xsmall="100" md-flex-small="100" md-flex-medium="50" md-vertical-align="center" md-align="start" >
         <h3>{{payload.repositoryName}}</h3>
       </md-layout>
 
     </md-layout>
-    <hr>
+    
     <md-layout md-gutter>
       <md-layout md-flex-xsmall="100" md-flex-small="100" md-flex-medium="50" md-align="center">
-        <h3>Info</h3>
+        <h4>Info</h4>
       </md-layout>
       <md-layout md-flex-xsmall="100" md-flex-small="100" md-flex-medium="50" md-vertical-align="center" md-align="start">
 
         <md-list>
           <md-list-item>
-            <h4>Language -{{payload.language}}</h4>
+            <h5>Language -{{payload.language}}</h5>
           </md-list-item>
           <md-list-item>
-            <h4>Repositoryname -{{payload.repositoryName}}</h4>
+            <h5>Repositoryname -{{payload.repositoryName}}</h5>
           </md-list-item>
           <md-list-item>
-            <h4>Containername -{{payload.containerName}}</h4>
+            <h5>Containername -{{payload.containerName}}</h5>
           </md-list-item>
           <md-list-item>
-            <h4>Git clone url -{{payload.path}}</h4>
+            <h5>Git clone url -{{payload.path}}</h5>
           </md-list-item>
         </md-list>
       </md-layout>
     </md-layout>
-    <hr>
+  
     <md-layout md-gutter>
 
       <md-layout md-flex-xsmall="100" md-flex-small="100" md-flex-medium="50" md-vertical-align="center" md-align="center">
-        <h3>Maintainance mode</h3>
+        <h4>Maintainance mode</h4>
       </md-layout>
       <md-layout md-flex-xsmall="100" md-flex-small="100" md-flex-medium="50" md-vertical-align="center" md-align="start">
       <md-switch md-theme="green" @change = "open" id="my-test5" name="my-test5" class="md-primary"></md-switch>
       </md-layout>
 
     </md-layout>
-    <hr>
+   
     <md-layout md-gutter>
 
       <md-layout md-flex-xsmall="100" md-flex-small="100" md-flex-medium="50" md-vertical-align="center" md-align="center">
-        <h3>Delete App</h3>
+        <h4>Delete App</h4>
       </md-layout>
       <md-layout md-flex-xsmall="100" md-flex-small="100" md-flex-medium="50" md-vertical-align="center" md-align="center">
         <md-button style='background-color : #ff323d ; color : #FFFFFF' class="md-raised">Delete</md-button>
@@ -68,42 +68,34 @@
 export default {
   data: () => ({
     payload: {
-      repositoryName: '',
-      userName: '',
-      language: '',
-      containerName: '',
-      path: '',
-      pathDocker: '',
-      date: '',
-      _id: ''
+      repositoryName: "",
+      userName: "",
+      language: "",
+      containerName: "",
+      path: "",
+      pathDocker: "",
+      date: "",
+      _id: ""
     },
-    vertical: 'top',
-    horizontal: 'right',
+    vertical: "top",
+    horizontal: "right",
     duration: 4000
   }),
-  beforeMount() {
-
-  },
+  beforeMount() {},
   mounted() {
-    this.payload = this.$store.getters.repositoryItem
-    console.log("Settings", this.$store.getters.repositoryItem)
-
+    this.payload = this.$store.getters.repositoryItem;
+    console.log("Settings", this.$store.getters.repositoryItem);
   },
-  beforeDestroy() {
-  },
-  destroyed() {
-  },
-  components: {
-
-  },
-  computed: {
-  },
+  beforeDestroy() {},
+  destroyed() {},
+  components: {},
+  computed: {},
   methods: {
- open() {
+    open() {
       this.$refs.snackbar.open();
     }
   }
-}
+};
 </script>
 <style>
 

@@ -6,7 +6,7 @@
 				<div class="md-title">
 					<md-icon>apps</md-icon>
 					<span @click="pushToPage('devdashboard')" style="color:#000000">
-						<a>My apps</a>
+						<a style="color:#000000">My apps</a>
 					</span> >>
 					<span style="color:#000000">{{repositoryName}}</span>
 				</div>
@@ -14,7 +14,7 @@
 
 			<md-card-content>
 				<md-tabs md-fixed style="color : #000000">
-					<md-tab md-label="Deploy" style="background : #efefef">
+					<md-tab md-label="Deploy" style="background : #ffffff">
 						<Deploy></Deploy>
 					</md-tab>
 
