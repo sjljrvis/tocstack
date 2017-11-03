@@ -236,7 +236,7 @@ text-align: left;
 .code-snippet {
 	display: block;
 	height: 300px !important;
-	max-width: 100%;
+	width: 400px !important;
 }
 
 span {

@@ -67,34 +67,57 @@
 			</div>
 		</div>
 
-		<div style='background-color : #d9d9dd ;color : #000000 '>
-			<div style="padding: 10% 0;">
+		<div style="background-color : #efefef ;text-align:center">
+			<div  style="padding: 3% 0%;">
+			<h3  style="text-align:center">Quick demo to take you through
+			<span style="color:#ff5722">tocstack</span></h3>
+			<md-button style="width : 150px !important ; font-weight:700" class="md-raised md-warn" @click="pushToLoginPage">Sign up for free</md-button>
+			</div>	
+		</div>
+
+		<div style='background-color : #ffffff ;color : #000000 '>
+					<div style="padding: 10% 1%;">
+						<md-layout md-gutter>
+							<md-layout  md-flex-xsmall="100" md-flex-small="100" md-flex-medium="100" md-flex-large="60" md-vertical-align="center">
+								<!-- <img src="https://hasura.io/rstatic/resources/hasura_ninga3.png"> -->
+								<img style="box-shadow: 1px 2px 23px 3px rgba(0,0,0,0.75);" src='../../../assets/demo1.png'></img>
+							</md-layout>
+							<md-layout class="twitter-card" md-align="center" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="100" md-flex-large="40" md-vertical-align="center">
+								<h2>Add new app</h2>
+								<p style="color : #000000 ;text-align:center">Login to tocstack and click new app ,choose your preferred programming language and click create</p>
+							</md-layout>
+
+						</md-layout>
+					</div>
+				</div>
+
+
+		<div style='background-color : rgb(240, 240, 245);color : #000000 '>
+			<div style="padding: 10% 1%;">
 				<md-layout md-gutter>
-					<md-layout md-align="center" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="50">
-						<img class='code-snippet' src='../../../assets/code1.png'></img>
+					<md-layout md-flex-xsmall="100" md-flex-small="100" md-flex-medium="100" md-flex-large="60" md-vertical-align="center">
+						<img  style="box-shadow: 2px 0px 25px 10px rgba(0,0,0,0.75);" src='../../../assets/demo2.png'></img>
 						<!-- https://hasura.io/rstatic/dist/09d9be2c190557c1dbf736dde688c99f.png -->
 					</md-layout>
 
 					<md-layout class="twitter-card" md-align="center" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="50" md-vertical-align="center">
-						<h3 style=" font-size : 2em !important ;">Write code</h3>
-						<p style="font-size : 1.2em ;">Given code is a simple hello world application written in nodeJS ,running on port 3000 .Similarly you can create other
-							<span>web-applications,microservices,cronjobs</span> or your own
-							<span>REST API</span> and host it on tocstack.</p>
-						<p>Language support - nodeJS (python,Go,ruby will be added soon)</p>
+						<h2>Write code</h2>
+						<p>This is the best part &#x263A; ,given example is simple a helloworld app written in nodeJS</p>
+						<p style="color:#ff5722">Language support - nodeJS (python,Go,ruby will be added soon)</p>
 					</md-layout>
 				</md-layout>
 			</div>
 		</div>
 
 		<div style=';background-color :  #ffffff ;color : #000000 '>
-			<div style="padding: 10% 0;">
+			<div style="padding: 10% 1%;">
 				<md-layout md-gutter>
-					<md-layout class="twitter-card" md-align="center" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="50"  md-flex-large="50">
-						<img class='code-snippet' src='../../../assets/terminal.png'></img>
+					<md-layout md-flex-xsmall="100" md-flex-small="100" md-flex-medium="100" md-flex-large="60" md-vertical-align="center">
+						<img style="box-shadow: 2px 0px 25px 10px  rgba(0,0,0,0.75);" src='../../../assets/demo3.png'></img>
 						<!-- <img class='code-snippet' src='../../../assets/code1.png'></img> -->
 					</md-layout>
 
-					<md-layout class="twitter-card" md-align="center" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="50"  md-flex-large="50" md-vertical-align="center">
+					<md-layout class="twitter-card" md-align="center" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="50" md-vertical-align="center">
 						<md-layout md-column>
 						<!-- <h2 style="color :#000000 !important ; font-size : 2em !important;text-align : center">Deploy with </h2> -->
 						<h2 style="color :#ff5722 !important ; font-size : 35px !important;text-align : center">Deploy with git </h2>
@@ -116,45 +139,59 @@
 			</div>
 		</div>
 
-		<div style='height:100vh;padding: 5% 0;background-color : #d9d9dd ;color : #000000 '>
-			<div style="padding: 10% 0;">
+		<div style="background-color : #efefef ;text-align:center">
+			<div  style="padding: 3% 0%;">
+			<h3  style="text-align:center">Wish to check status of your app from terminal ?</h3>
+			<h3  style="text-align:center">Checkout
+			<span style="color:#ff5722">tocstack CLI.</span> It,s free !!</h3>
+			<md-button style="width : 150px !important ; font-weight:700" class="md-raised md-warn" @click="pushToLoginPage">Download</md-button>
+			</div>	
+		</div>
+
+		<div style='background-color : #ffffff ;color : #000000 '>
+			<div style="padding: 10% 1%;">
 				<md-layout md-gutter>
-					<md-layout class="twitter-card" md-align="center" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="50">
-						<img class='code-snippet' src='https://hasura.io/rstatic/resources/banner/deploy-git.png'></img>
-					</md-layout>
 
 					<md-layout class="twitter-card" md-align="center" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="50" md-vertical-align="center">
-						<h3>Deploy with git<br>
-							<span>#tocstack</span>
-						</h3>
-						<p>Create a Dockerfile, and push your code. Or use one of our ever growing git-push templates to get started quickly.</p>
-						<p>Deployment automation done right - just git push your code to deploy a containerized service. Read more from our blog</p>
-
+						<md-layout md-column>
+						<!-- <h2 style="color :#000000 !important ; font-size : 2em !important;text-align : center">Deploy with </h2> -->
+						<h2 style="color :#ff5722 !important ; font-size : 35px !important;text-align : center">tocstack CLI </h2>
+						 <p style="color : #000000 ;text-align:center">Easy to use cli to keep eye on your deployed apps .<br> Enter tocstack to get started</p>	
+						</md-layout>
 					</md-layout>
+
+					<md-layout md-flex-xsmall="100" md-flex-small="100" md-flex-medium="100" md-flex-large="60" md-vertical-align="center">
+						<img style="box-shadow: 2px 0px 25px 10px  rgba(0,0,0,0.75);" src='../../../assets/cli1.png'></img>
+						<!-- <img class='code-snippet' src='../../../assets/code1.png'></img> -->
+					</md-layout>
+
+
 
 				</md-layout>
 			</div>
 		</div>
 
-		<div style='height:100vh;padding: 5% 0;background-color : #ffffff;color : #000000 '>
-			<div style="padding: 10% 0;">
+		<div style='background-color : rgb(240, 240, 245) ;color : #000000 '>
+			<div style="padding: 10% 1%;">
 				<md-layout md-gutter>
-					<md-layout class="twitter-card" md-align="center" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="50" md-vertical-align="center">
-						<img class='code-snippet' src='https://hasura.io/rstatic/dist/09d9be2c190557c1dbf736dde688c99f.png'></img>
-					</md-layout>
 
 					<md-layout class="twitter-card" md-align="center" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="50" md-vertical-align="center">
-						<h3>Data APIs<br>
-							<span>#tocstack</span>
-						</h3>
-						<p>HTTP API over Postgres with role based row level permissions. A JSON based query language, similar to GraphQL.</p>
-						<p>The power of Postgres with the ease of JSON. The most performant data APIs ever. Read more from our blog</p>
-
+						<md-layout md-column>
+						<h2 style="color :#ff5722 !important ; font-size : 35px !important;text-align : center">Monitor apps</h2>
+						<p style="color : #000000 ;text-align:center">View application logs,status using simple CLI commands</p>	
+						</md-layout>
 					</md-layout>
+
+					<md-layout md-flex-xsmall="100" md-flex-small="100" md-flex-medium="100" md-flex-large="60" md-vertical-align="center">
+						<img style="box-shadow: 2px 0px 25px 10px  rgba(0,0,0,0.75);" src='../../../assets/cli2.png'></img>
+					</md-layout>
+
+
 
 				</md-layout>
 			</div>
 		</div>
+
 
 		<div style=';background-color : rgba(19, 41, 78, 1) ;color : #FFFFFF ;'>
 			<div style='padding : 20px 20px 20px 20px'>
@@ -283,55 +320,47 @@
 
 
 <script>
-import Tocstackfooter from './tocstackfooter.vue'
+import Tocstackfooter from "./tocstackfooter.vue";
 export default {
+  data: () => {
+    return {
+      imgsrc: "../../../assets/hasura.png"
+    };
+  },
 
-	data: () => {
-		return {
-			imgsrc: '../../../assets/hasura.png'
-		}
-	},
+  beforeMount() {
+    this.$store.dispatch("setCurrentRoute", "/dashboard");
+  },
 
-	beforeMount() {
-		this.$store.dispatch('setCurrentRoute', '/dashboard');
-	},
-
-	mounted() {
-
-	},
-	beforeDestroy() {
-
-	},
-	destroyed() {
-
-	},
-	components: {
-		Tocstackfooter
-	},
-	computed: {
-
-	},
-	methods: {
-		pushToLoginPage() {
-			this.$router.push({
-				path: '/login', name: 'Login',
-			})
-		}
-	}
-}
+  mounted() {},
+  beforeDestroy() {},
+  destroyed() {},
+  components: {
+    Tocstackfooter
+  },
+  computed: {},
+  methods: {
+    pushToLoginPage() {
+      this.$router.push({
+        path: "/login",
+        name: "Login"
+      });
+    }
+  }
+};
 </script>
 
 <style>
 #board {
-	width: auto;
+  width: auto;
 }
 
 #example-3 {
-	color: #fff;
-	text-align: center;
+  color: #fff;
+  text-align: center;
 }
 
 #example-3 .flex {
-	margin-bottom: 16px;
+  margin-bottom: 16px;
 }
 </style>
