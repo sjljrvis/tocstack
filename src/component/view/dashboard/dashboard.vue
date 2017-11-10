@@ -192,6 +192,31 @@
 			</div>
 		</div>
 
+  	<div style='background-color : #ffffff ;color : #000000 '>
+			<div style="padding: 10% 1%;">
+				<md-layout md-gutter>
+
+					<md-layout class="twitter-card" md-align="center" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="50" md-vertical-align="center">
+						<md-layout md-column>
+						<!-- <h2 style="color :#000000 !important ; font-size : 2em !important;text-align : center">Deploy with </h2> -->
+						<h2 style="color :rgb(98, 207, 115) !important ; font-size : 35px !important;text-align : center">About Open source </h2>
+						 <p style="color : #000000 ;text-align:center">We too share unconditional &hearts; for open source </p>
+						 <div style = "text-align:center">	
+						<md-button style="background-color :rgb(98, 207, 115) ;width : 150px !important ; font-weight:700" class="md-raised md-warn" @click="pushToOpenSource">Check out</md-button>						 
+						</div>
+						</md-layout>
+					</md-layout>
+
+					<md-layout md-align="center" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="100" md-flex-large="60" md-vertical-align="center">
+						<img src='../../../assets/opensource.png'></img>
+						<!-- <img class='code-snippet' src='../../../assets/code1.png'></img> -->
+					</md-layout>
+
+
+
+				</md-layout>
+			</div>
+		</div>
 
 		<div style=';background-color : rgba(19, 41, 78, 1) ;color : #FFFFFF ;'>
 			<div style='padding : 20px 20px 20px 20px'>
@@ -344,6 +369,12 @@ export default {
       this.$router.push({
         path: "/login",
         name: "Login"
+      });
+    },
+    pushToOpenSource() {
+      this.$router.push({
+        path: "/opensource",
+        name: "opensource"
       });
     }
   }
