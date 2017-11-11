@@ -48,11 +48,20 @@ export default new VueRouter({
 			path: '/blog' ,
 			component: require('../component/view/dashboard/blog.vue')
 		},
-
 		{ 
 			name : 'opensource', 
 			path: '/opensource' ,
 			component: require('../component/view/dashboard/opensource.vue')
+		},
+		{ 
+			name : 'team', 
+			path: '/team' ,
+			component: require('../component/view/dashboard/team.vue')
+		},
+		{ 
+			name : 'contribute', 
+			path: '/contribute' ,
+			component: require('../component/view/dashboard/contribute.vue')
 		},
 		{ 
 			name : 'profile', 
