@@ -67,7 +67,7 @@
 			</div>
 		</div>
 
-		<div style="background-color : #efefef ;text-align:center">
+		<div id='demo-div' style="background-color : #efefef ;text-align:center">
 			<div  style="padding: 3% 0%;">
 			<h3  style="text-align:center">Quick demo to take you through
 			<span style="color:#ff5722">tocstack</span></h3>

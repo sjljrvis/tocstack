@@ -15,7 +15,7 @@
 						</md-layout>
 						<md-layout md-align="center" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="10"  md-flex-large="10">
 							<md-layout md-column >
-								<a style="text-decoration:none;cursor: pointer;" onmouseover=""><h5 style="color : #FFFFFF !important ;margin-top : 10px ;margin-bottom : 10px">Demo</h5></a>
+								<a  href="#" v-scroll-to="'demo-div'"style="text-decoration:none;cursor: pointer;" onmouseover=""><h5 style="color : #FFFFFF !important ;margin-top : 10px ;margin-bottom : 10px">Demo</h5></a>
 								<a style="text-decoration:none;cursor: pointer;" onmouseover=""><h5 style="color : #FFFFFF !important ;margin-top : 10px ;margin-bottom : 10px"  @click="pushToOpenSource">Opensource</h5></a>
 								<a style="text-decoration:none;cursor: pointer;" onmouseover=""><h5 style="color : #FFFFFF !important ;margin-top : 10px ;margin-bottom : 10px">Contribute</h5></a>
 								<a style="text-decoration:none;cursor: pointer;" onmouseover=""><h5 style="color : #FFFFFF !important ;margin-top : 10px ;margin-bottom : 10px">Help</h5></a>
