@@ -1,6 +1,7 @@
 <template>
 	<div>
-
+		<Tocstackheader></Tocstackheader>
+		<hr style="width:60%">
 		<div style='background-color : #ffffff'>
 			<div style="padding: 0% 0%; margin : 0% 0%">
 				<md-layout md-gutter>
@@ -43,7 +44,7 @@
 
 <script>
 import Tocstackfooter from "./tocstackfooter.vue";
-
+import Tocstackheader from "./tocstackheader.vue";
 export default {
   beforeMount() {
     this.$store.dispatch("setCurrentRoute", "/dashboard");
@@ -53,7 +54,7 @@ export default {
   beforeDestroy() {},
   destroyed() {},
   components: {
-    Tocstackfooter
+    Tocstackfooter,Tocstackheader
   },
   computed: {},
   methods: {}
