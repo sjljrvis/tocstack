@@ -44,7 +44,7 @@ import { makeRequest } from "../../../../helper/internet.js";
 export default {
   data: () => ({}),
   beforeMount() {
-    this.setFooterPosition();
+    //this.setFooterPosition();
   },
   mounted() {
     console.log(this.$store.getters);

@@ -49,7 +49,6 @@ export default {
 	}),
 	beforeMount() {
 		this.$store.dispatch("setCurrentRoute", "/devdashboard");
-		this.clearRepositoryItem();
 	},
 	mounted() {
 		this.getItems(() => {
@@ -99,15 +98,6 @@ export default {
 				})
 				.catch(reject => console.log(reject));
 		},
-
-		clearRepositoryItem() {
-			if (this.$store.getters.repositoryItem != undefined) {
-				this.$store.getters.repositoryItem = undefined
-			}
-			console.log("Main item", this.$store.getters.repositoryItem)
-		}
-
-
 	}
 }
 </script>

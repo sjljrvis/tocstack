@@ -3,7 +3,7 @@
 		<Tocstackheader></Tocstackheader>
 		<hr style="width:60%">
 		<div style='background-color : #ffffff'>
-			<div style="padding: 0% 0%; margin : 0% 0%">
+			<div style="padding: 1% 0; margin : 0% 10%">
 				<md-layout md-gutter>
 					<md-layout md-column>
 							<div style="text-align:center">
@@ -18,7 +18,7 @@
 								
 							</div>
 							<div style="text-align:center">
-								<p style="width:375px;margin-left: auto; margin-right: auto;padding:1px 1px "> 
+								<p style="width:auto;margin-left: auto; margin-right: auto;padding:1px 1px "> 
 									I started working on tocstack as a part of weekend hack-project, 
 									Later I was motivated to pivot tocstack into a PaaS to help other fellow developers to
 									deploy apps/web-services rapidly using <span style="color:#ff5722">git</span>.

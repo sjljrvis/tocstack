@@ -3,22 +3,22 @@ const state = {
 	item: {}
 }
 const mutations = {
-	SET_REPOSITORY_LEAD_ITEMS: (state, payload) => {
-		state.items = payload.data;
+	SET_REPOSITORY_ITEMS: (state, payload) => {
+		state.items = payload;
 		//const pages = Object.assign(payload.pages, payload.items);
 		//state.paging = Object.assign({}, pages);
 	},
-	SET_REPOSITORY_LEAD_ITEM: (state, payload) => {
+	SET_REPOSITORY_ITEM: (state, payload) => {
 		state.item = Object.assign({}, payload);
 	}
 }
 
 const actions = {
 	setRepositoryItems({ commit }, payload) {
-		commit('SET_REPOSITORY_LEAD_ITEMS', payload)
+		commit('SET_REPOSITORY_ITEMS', payload)
 	},
 	setRepositoryItem({ commit }, payload) {
-		commit('SET_REPOSITORY_LEAD_ITEM', payload);
+		commit('SET_REPOSITORY_ITEM', payload);
 	},
 }
 

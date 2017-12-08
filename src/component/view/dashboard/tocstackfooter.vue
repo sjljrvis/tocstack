@@ -39,7 +39,7 @@
 					</md-layout>
 				</div>
 		</div>
-		<div style = "background-color : rgba(19, 41, 78, 1);margin : 10px 0px 10px 10px">
+		<div style = "background-color : rgba(19, 41, 78, 1);margin : 0px 0px 0px 0px">
 			<h6 style="color : #FFFFFF !important ;margin-top : 10px ;margin-bottom : 0px ;text-align:center"> &copy; 2017 &nbsp;&nbsp;tocstack.com &nbsp;All rights reserved</h6>
 		</div>
 	</div>
