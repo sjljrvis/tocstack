@@ -47,27 +47,22 @@ export default {
     //this.setFooterPosition();
   },
   mounted() {
-    console.log(this.$store.getters);
   },
   beforeDestroy() {},
   destroyed() {},
   components: {},
   computed: {
     setFooterPosition() {
-      console.log("Store", this.$store.getters.appFooterPosition);
       if (this.$store.getters.appFooterPosition == true) {
         return "position: relative; bottom: 0px;width: 100%;";
       } else if (this.$store.getters.appDeviceType == "Phone") {
-        console.log("check1");
         return "position: relative; bottom: 0px;width: 100%;";
       } else if (
         this.$store.getters.appCurrentRoute != "/devdashboard" &&
         this.$store.getters.appDeviceType != "Phone"
       ) {
-        console.log("check2");
         return "position: relative; bottom: 0px;width: 100%;";
       } else {
-        console.log("check3");
         return "position: fixed !important; bottom:0px !important;width: 100%;";
       }
     }

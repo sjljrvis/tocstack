@@ -14,7 +14,7 @@
 				<md-layout md-align="end" md-flex-xsmall="50" md-flex-small="50" md-flex-medium="50">
 					<div>
 						<md-menu md-align-trigger md-direction="bottom left" md-size="3">
-							<md-avatar style="width:40px !important;height:40px !important;margin-top: 30px;">
+							<md-avatar style="width:40px !important;height:40px !important;margin-top: 30px">
 								<img md-menu-trigger src="../../../../assets/sejal.png" alt="People">
 							</md-avatar>
 							<md-menu-content style="width:auto !important;">

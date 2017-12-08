@@ -84,7 +84,6 @@ export default {
 			makeRequest('/repositories', 'GET', null, null)
 				.then((result) => {
 					let res = result.res;
-					console.log("Status", res.data.length)
 					if (!result.error && res && res.status == 200) {
 						this.$store.dispatch('setRepositoryItems', res.data);
 						this.payload.items = res.data;

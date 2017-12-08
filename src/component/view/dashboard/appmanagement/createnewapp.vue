@@ -146,9 +146,7 @@ export default {
       makeRequest("/createrepository", "POST", null, payloadRepository)
         .then(result => {
           let res = result.res;
-          console.log("Status", res.data.status);
           if (res.data.status != "true") {
-            console.log(payloadRepository);
             this.$refs.snackbar.open();
           } else {
             this.pushToDevdashboard();

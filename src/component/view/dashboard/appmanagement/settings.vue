@@ -84,7 +84,6 @@ export default {
   beforeMount() {},
   mounted() {
     this.payload = this.$store.getters.repositoryItem;
-    console.log("Settings", this.$store.getters.repositoryItem);
   },
   beforeDestroy() {},
   destroyed() {},

@@ -5,8 +5,6 @@ const state = {
 const mutations = {
 	SET_REPOSITORY_ITEMS: (state, payload) => {
 		state.items = payload;
-		//const pages = Object.assign(payload.pages, payload.items);
-		//state.paging = Object.assign({}, pages);
 	},
 	SET_REPOSITORY_ITEM: (state, payload) => {
 		state.item = Object.assign({}, payload);

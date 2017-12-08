@@ -108,10 +108,8 @@ export default {
         .then((result) => {
           let res = result.res;
           if (!result.error && res) {
-            console.log("Response", res)
             let _info = res.data[0];
             this.info = Object.assign({}, _info)
-            console.log("Info", this.info)
           }
         })
         .catch(reject => console.log(reject));
