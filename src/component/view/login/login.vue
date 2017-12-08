@@ -61,10 +61,12 @@
 export default {
   beforeMount() {
     this.$store.dispatch("setCurrentRoute", "/login");
+    if (!(this.$browserStore.get("default_auth_token").length <= 0)) {
+      this.pushToDashboardPage()
+    }
   },
   mounted() {
     if (this.$auth.redirect()) {
-      console.log(this.$auth.redirect().from.name);
       this.redirect = this.$auth.redirect().from.name;
     }
   },
@@ -108,6 +110,12 @@ export default {
       this.$router.push({
         path: "/register",
         name: "register"
+      });
+    },
+    pushToDashboardPage() {
+      this.$router.push({
+        path: "/devdashboard",
+        name: "devdashboard"
       });
     },
     login() {

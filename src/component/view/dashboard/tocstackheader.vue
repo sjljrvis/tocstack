@@ -14,7 +14,7 @@
 				</md-layout>
 
 				<md-layout md-align="end">
-          	<md-button style="height:10px;!important;margin-top:30px"class="md-raised md-warn" @click="pushToLoginPage">Login</md-button>
+          	<md-button style="height:10px;!important;margin-top:30px"class="md-raised md-warn" @click="pushToPage('/login')">Login</md-button>
 				</md-layout>
         
 			</md-layout>
@@ -26,7 +26,6 @@
 <script>
 export default {
   beforeMount() {
-    this.$store.dispatch("setCurrentRoute", "/dashboard");
   },
 
   mounted() {},

@@ -182,7 +182,7 @@ import Tocstackfooter from './tocstackfooter.vue'
 
 export default {
   beforeMount() {
-    this.$store.dispatch('setCurrentRoute', '/dashboard');
+    this.$store.dispatch('setCurrentRoute', '/blog');
   },
 
   mounted() {

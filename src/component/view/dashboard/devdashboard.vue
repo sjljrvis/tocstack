@@ -32,73 +32,78 @@
 
 
 <script>
-import { makeRequest } from '../../../helper/internet';
-import DashboardHeader from './partial/dashboardheader.vue'
-import DashboardFooter from './partial/dashboardfooter.vue'
+import { makeRequest } from "../../../helper/internet";
+import DashboardHeader from "./partial/dashboardheader.vue";
+import DashboardFooter from "./partial/dashboardfooter.vue";
 export default {
-	data: () => ({
-		vertical: 'top',
-		horizontal: 'center',
-		duration: 2000,
-		appManagement: "Hello",
-		payload: {
-			items: []
-		},
-
-
-	}),
-	beforeMount() {
-		this.$store.dispatch("setCurrentRoute", "/devdashboard");
-	},
-	mounted() {
-		this.getItems(() => {
-			this.$store.dispatch('setIsProgressVisible', true);
-		});
-		this.$store.dispatch('setIsProgressVisible', false);
-	},
-	beforeDestroy() {
-	},
-	destroyed() {
-	},
-	components: {
-		DashboardHeader,DashboardFooter
-	},
-	computed: {
-	},
-	methods: {
-		goToAppManagement(e, item) {
-			this.$router.push({
-				path: '/appmanagement', name: 'appManagement',
-				params: {
-					'repository_id': item._id,
-					'item': item
-				}
-			})
-		},
-		pushtocreatenewapp() {
-			this.$router.push({
-				path: '/appmanagement/createnewapp', name: 'createnewapp'
-			})
-		},
-		getItems(callback = null) {
-			makeRequest('/repositories', 'GET', null, null)
-				.then((result) => {
-					let res = result.res;
-					if (!result.error && res && res.status == 200) {
-						this.$store.dispatch('setRepositoryItems', res.data);
-						this.payload.items = res.data;
-						this.$store.dispatch('setIsProgressVisible', false);
-						if(res.data.length >=4){
-								this.$store.dispatch('setFooterPosition', true);
-						}else{
-								this.$store.dispatch('setFooterPosition', false);
-						}
-					}
-				})
-				.catch(reject => console.log(reject));
-		},
-	}
-}
+  data: () => ({
+    vertical: "top",
+    horizontal: "center",
+    duration: 2000,
+    appManagement: "Hello",
+    payload: {
+      items: []
+    }
+  }),
+  beforeMount() {
+    this.$store.dispatch("setCurrentRoute", "/devdashboard");
+  },
+  mounted() {
+    this.getItems(() => {
+      this.$store.dispatch("setIsProgressVisible", true);
+    });
+    this.$store.dispatch("setIsProgressVisible", false);
+  },
+  beforeDestroy() {},
+  destroyed() {},
+  components: {
+    DashboardHeader,
+    DashboardFooter
+  },
+  computed: {},
+  methods: {
+    goToAppManagement(e, item) {
+      this.$router.push({
+        path: "/appmanagement",
+        name: "appManagement",
+        params: {
+          repository_id: item._id,
+          item: item
+        }
+      });
+    },
+    pushtocreatenewapp() {
+      this.$router.push({
+        path: "/appmanagement/createnewapp",
+        name: "createnewapp"
+      });
+    },
+    getItems(callback = null) {
+      makeRequest("/repositories", "GET", null, null)
+        .then(result => {
+          let res = result.res;
+          if (!result.error && res && res.status == 200) {
+            this.$store.dispatch("setRepositoryItems", res.data);
+            this.payload.items = res.data;
+            this.$store.dispatch("setIsProgressVisible", false);
+            if (res.data.length >= 4) {
+              this.$store.dispatch("setFooterPosition", true);
+            } else {
+              this.$store.dispatch("setFooterPosition", false);
+            }
+          }
+        })
+        .catch(reject => {
+          console.log(reject);
+          this.$browserStore.set("default_auth_token", "");
+          this.$router.push({
+            path: "/login",
+            name: "login"
+          });
+        });
+    }
+  }
+};
 </script>
 <style>
 

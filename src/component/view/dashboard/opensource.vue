@@ -32,7 +32,7 @@ import Tocstackfooter from "./tocstackfooter.vue";
 import Tocstackheader from "./tocstackheader.vue";
 export default {
   beforeMount() {
-    this.$store.dispatch("setCurrentRoute", "/dashboard");
+    this.$store.dispatch("setCurrentRoute", "/opensource");
   },
 
   mounted() {},
