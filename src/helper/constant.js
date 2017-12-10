@@ -1,5 +1,6 @@
+import {serverUrl} from '../../config'
 //app
-export const URL_BASE = 'http://localhost:5555'; //specify base url of all requests
+export const URL_BASE = serverUrl; //specify base url of all requests
 export const APP_NAME = 'Vue Dashboard';
 
 
