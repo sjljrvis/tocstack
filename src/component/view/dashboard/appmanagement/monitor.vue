@@ -76,46 +76,39 @@
 
 
 <script>
-import { makeRequest } from '../../../../helper/internet.js';
+import { makeRequest } from "../../../../helper/internet.js";
 export default {
-
   data: () => ({
-    info: {
-    },
-    logs: ''
-
+    info: {},
+    logs: ""
   }),
-  beforeMount() {
-
-  },
+  beforeMount() {},
   mounted() {
     this.monitorContainer();
   },
-  beforeDestroy() {
-  },
-  destroyed() {
-  },
-  components: {
-  },
-  computed: {
-  },
+  beforeDestroy() {},
+  destroyed() {},
+  components: {},
+  computed: {},
   methods: {
     fetchLogs() {
-      this.logs = '{"log":"Server running at http://localhost:3000\n","stream":"stdout","time":"2017-09-04T11:15:39.859242485Z"}'
+      this.logs =
+        '{"log":"Server running at http://localhost:3000\n","stream":"stdout","time":"2017-09-04T11:15:39.859242485Z"}';
     },
     monitorContainer() {
-      makeRequest('/monitorcontainer', 'GET', null, null)
-        .then((result) => {
+      makeRequest("/monitorcontainer?containerName=sejal", "GET", null, null)
+        .then(result => {
           let res = result.res;
           if (!result.error && res) {
             let _info = res.data[0];
-            this.info = Object.assign({}, _info)
+            this.info = Object.assign({}, _info);
+            console.log("............................\n",  this.info);
           }
         })
         .catch(reject => console.log(reject));
     }
   }
-}
+};
 </script>
 <style>
 

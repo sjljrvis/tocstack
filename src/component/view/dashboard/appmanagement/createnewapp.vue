@@ -15,7 +15,7 @@
 								<md-input type="text" v-model="payload.repositoryName" ref="repositoryName"></md-input>
 							</md-input-container>
 
-							<md-input-container>
+							<md-input-container  style="width:350px !important" >
 								<md-icon>language</md-icon>
 								<label>Choose a language</label>
 								<md-select  style="width:350px !important" required v-model="payload.language">

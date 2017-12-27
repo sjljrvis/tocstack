@@ -52,7 +52,7 @@
         <h4>Delete App</h4>
       </md-layout>
       <md-layout md-flex-xsmall="100" md-flex-small="100" md-flex-medium="50" md-vertical-align="center" md-align="center">
-        <md-button style='background-color : #ff323d ; color : #FFFFFF' class="md-raised">Delete</md-button>
+        <md-button style='background-color : #ff323d ; color : #FFFFFF' class="md-raised" @click="deleteRepository">Delete</md-button>
       </md-layout>
 
     </md-layout>
@@ -65,6 +65,8 @@
 
 
 <script>
+import { makeRequest } from "../../../../helper/internet.js";
+
 export default {
   data: () => ({
     payload: {
@@ -92,6 +94,26 @@ export default {
   methods: {
     open() {
       this.$refs.snackbar.open();
+    },
+    pushToDevdashboard() {
+      this.$router.push({
+        path: `/devdashboard`,
+        name: `devdashboard`
+      });
+    },
+    deleteRepository() {
+      const { repositoryName, _id } = this.payload;
+      const payloadRepository = { repositoryName };
+      makeRequest(`/deleterepository/${_id}`, "POST", null, payloadRepository)
+        .then(result => {
+          let res = result.res;
+          if (res.data.status != true) {
+            this.$refs.snackbar.open();
+          } else {
+            this.pushToDevdashboard();
+          }
+        })
+        .catch(reject => console.log(reject));
     }
   }
 };
