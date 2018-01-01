@@ -57,7 +57,7 @@
 
     </md-layout>
  <md-snackbar :md-position="vertical + ' ' + horizontal" ref="snackbar" :md-duration="duration">
-    <span style = "color : #FFFFFF">App put to maitainance mode</span>
+    <span style = "color : #FFFFFF">{{snackbarMessage}}</span>
     <md-button class="md-accent" md-theme="light-blue" @click="$refs.snackbar.close()">Retry</md-button>
   </md-snackbar>
   </div>
@@ -81,7 +81,8 @@ export default {
     },
     vertical: "top",
     horizontal: "right",
-    duration: 4000
+		duration: 4000,
+		snackbarMessage : ""
   }),
   beforeMount() {},
   mounted() {
@@ -108,6 +109,7 @@ export default {
         .then(result => {
           let res = result.res;
           if (res.data.status != true) {
+						this.snackbarMessage = res.result.message ;
             this.$refs.snackbar.open();
           } else {
             this.pushToDevdashboard();

@@ -6,14 +6,14 @@
 			<md-layout md-gutter>
 				<md-layout md-align="start" md-row>
 					<div style="padding-left:20px;margin-top: 25px;">
-						<img style="color : #FFFFFF ;width :40px ; height : 40px; " src="../../../assets/rocket.png">
+						<img style="color : #FFFFFF ;width :40px ; height : 40px; " src="../../../assets/rocket.png"  @click="pushToPage('dashboard')">
 					</div>
-					<h3 style="color :#000000 !important;font-size:40px!important;font-weight: 400 !important;">
+					<h3 style="color :#000000 !important;font-size:40px!important;font-weight: 400 !important;"  @click="pushToPage('dashboard')">
 						tocstack
 					</h3>
 				</md-layout>
 
-				<md-layout md-align="end">
+				<md-layout md-align = "end">
           	<md-button style="height:10px;!important;margin-top:30px"class="md-raised md-warn" @click="pushToPage('/login')">Login</md-button>
 				</md-layout>
         
@@ -22,12 +22,9 @@
 	  </div>
 </template>
 
-
 <script>
 export default {
-  beforeMount() {
-  },
-
+  beforeMount() {},
   mounted() {},
   beforeDestroy() {},
   destroyed() {},
@@ -41,6 +38,7 @@ export default {
       });
     },
     pushToPage(route) {
+      console.log(">>>>>>>>", route);
       this.$router.push({
         path: `/${route}`,
         name: route

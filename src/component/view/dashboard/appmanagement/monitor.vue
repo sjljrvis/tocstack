@@ -8,13 +8,12 @@
 
         <md-list>
           <md-list-item>
-            <h4 v-if="info.State.Running">Running </h4>
+            <h4 v-if="info.State && info.State.Running">Running </h4>
             <h4 v-else> Stopped </h4>
           </md-list-item>
           <md-list-item>
             <h4>Process Id - {{info.State.Pid}}</h4>
           </md-list-item>
-
           <md-list-item>
             <h4>Shared Memory - {{info.HostConfig.ShmSize}} KB </h4>
           </md-list-item>
@@ -79,7 +78,11 @@
 import { makeRequest } from "../../../../helper/internet.js";
 export default {
   data: () => ({
-    info: {},
+    info: {
+      State: { Pid: 0 },
+      HostConfig: { ShmSize: 0 },
+      NetworkSettings: { IPAddress: 0, MacAddress: 0 }
+    },
     logs: ""
   }),
   beforeMount() {},
@@ -102,7 +105,7 @@ export default {
           if (!result.error && res) {
             let _info = res.data[0];
             this.info = Object.assign({}, _info);
-            console.log("............................\n",  this.info);
+            console.log("............................\n", this.info);
           }
         })
         .catch(reject => console.log(reject));

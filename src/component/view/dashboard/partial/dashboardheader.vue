@@ -5,9 +5,9 @@
 			<md-layout md-gutter>
 				<md-layout md-align="start" md-flex-xsmall="50" md-flex-small="50" md-flex-medium="50">
 					<div style="padding-left:20px;margin-top: 25px;">
-						<img style="color : #FFFFFF ;width :40px ; height : 40px; " src="../../../../assets/rocket.png">
+						<img style="color : #FFFFFF ;width :40px ; height : 40px; " src="../../../../assets/rocket.png" @click="pushToPage('dashboard')">
 					</div>
-					<h3 style="color :#000000 !important;font-size:40px!important;font-weight: 400 !important;">
+					<h3 style="color :#000000 !important;font-size:40px!important;font-weight: 400 !important;" @click="pushToPage('dashboard')">
 						tocstack
 					</h3>
 				</md-layout>

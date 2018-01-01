@@ -22,9 +22,9 @@
 						<Monitor></Monitor>
 					</md-tab>
 
-					<md-tab md-label="Add config ">
+					<!-- <md-tab md-label="Add config ">
 						<Addconfig></Addconfig>
-					</md-tab>
+					</md-tab> -->
 
 					<md-tab md-label="Settings">
 						<Settings></Settings>

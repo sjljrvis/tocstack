@@ -40,7 +40,7 @@
 		</div>
 
 		<md-snackbar :md-position="snackBar.vertical + ' ' + snackBar.horizontal" ref="snackbar" :md-duration="snackBar.duration">
-		<p style="color:#ffffff">App with this name already exists . Please choose another one</p>
+		<p style="color:#ffffff">{{snackBar.snackBarMessage}}</p>
 		<md-button class="md-warn" @click="$refs.snackbar.close()">close</md-button>
 	</md-snackbar>
 
@@ -116,7 +116,8 @@ export default {
       snackBar: {
         vertical: "top",
         horizontal: "center",
-        duration: 10000
+				duration: 4000,
+				snackBarMessage : ""
       }
     };
   },
@@ -147,6 +148,7 @@ export default {
         .then(result => {
           let res = result.res;
           if (res.data.status != "true") {
+						this.snackBar.snackBarMessage = res.data.message;
             this.$refs.snackbar.open();
           } else {
             this.pushToDevdashboard();

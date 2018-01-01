@@ -17,7 +17,7 @@
 								</md-layout>
 								<md-layout md-row md-align="center">
 									<h2 style="color :#efefef !important"> One shot app deployment</h2>
-									<p style="color :#efefef ">Don’t waste time writing repetitive code. #PaaS</p>
+									<p style="color :#efefef ">Don’t waste time writing server configuration. #PaaS</p>
 								</md-layout>
 							</md-layout>
 						</md-layout>
