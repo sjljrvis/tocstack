@@ -7,7 +7,7 @@ export default new VueRouter({
 	base: __dirname,
 	routes: [
 		{
-			name: 'Login',
+			name: 'login',
 			path: '/login',
 			component: require('../component/view/login/login.vue'),
 		},

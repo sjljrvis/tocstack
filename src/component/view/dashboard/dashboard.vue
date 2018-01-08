@@ -368,7 +368,7 @@ export default {
     pushToLoginPage() {
       this.$router.push({
         path: "/login",
-        name: "Login"
+        name: "login"
       });
     },
     pushToOpenSource() {

@@ -127,7 +127,7 @@ export default {
 		},
 		pushToLogin() {
 			this.$router.push({
-				path: '/login', name: 'Login',
+				path: '/login', name: 'login',
 			})
 		},
 

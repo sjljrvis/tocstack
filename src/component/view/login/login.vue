@@ -61,8 +61,11 @@
 export default {
   beforeMount() {
     this.$store.dispatch("setCurrentRoute", "/login");
-    if (!(this.$browserStore.get("default_auth_token").length <= 0)) {
-      this.pushToDashboardPage()
+    if (
+      this.$browserStore.get("default_auth_token") &&
+      !(this.$browserStore.get("default_auth_token").length <= 0)
+    ) {
+      this.pushToDashboardPage();
     }
   },
   mounted() {
