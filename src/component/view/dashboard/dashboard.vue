@@ -220,7 +220,6 @@
 
 		<div style=';background-color : rgba(19, 41, 78, 1) ;color : #FFFFFF ;'>
 			<div style='padding : 20px 20px 20px 20px'>
-				<a href="#" v-scroll-to="'#element5'">Scroll to #element 4</a>
 
 				<md-layout md-gutter>
 					<md-layout md-vertical-align="center" style="height:736px">
@@ -261,7 +260,6 @@
 
 		<div style='background-color : #FFFFFF ;'>
 			<div style='padding : 10px 10px 10px 10px'>
-				<a href="#" v-scroll-to="'#element1'">Scroll to #element 1</a>
 				<h2>tocstack</h2>
 				<h3 style = "text-align:center">
 					<span>Blogs</span>
