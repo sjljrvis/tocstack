@@ -50,7 +50,7 @@
 			</md-dialog-confirm>
 		</div >
 		<md-snackbar :md-position="snackBar.vertical + ' ' + snackBar.horizontal" ref="snackbar" :md-duration="snackBar.duration">
-		<p style="color:#ffffff">App with this name already exists . Please choose another one</p>
+		<p style="color:#ffffff">{{snackBar.errorMessage}}</p>
 		<md-button class="md-warn" @click="$refs.snackbar.close()">close</md-button>
 	</md-snackbar>
 	</div>
@@ -93,7 +93,8 @@ export default {
       snackBar: {
         vertical: "top",
         horizontal: "center",
-        duration: 10000
+				duration: 10000 , 
+				errorMessage : "" ,
       }
     };
   },
@@ -142,8 +143,9 @@ export default {
             this.$browserStore.set("userName", res.data.userName);
           },
           error(error) {
+						console.log(error)
             this.$store.dispatch("setIsProgressVisible", false);
-            //this.openDialog();
+            this.snackBar.errorMessage = "Email or password is wrong"
             this.$refs.snackbar.open();
           }
         });

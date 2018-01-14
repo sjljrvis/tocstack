@@ -18,16 +18,16 @@
             <h4>Shared Memory - {{info.HostConfig.ShmSize}} KB </h4>
           </md-list-item>
           <md-list-item>
-            <h4>IP Address - {{info.NetworkSettings.IPAddress}}</h4>
+            <h4>IP Address - {{info.NetworkSettings[`${this.repositoryName}docker_default`].IPAddress}}</h4>
           </md-list-item>
           <md-list-item>
-            <h4>MAC Address - {{info.NetworkSettings.MacAddress}}</h4>
+            <h4>MAC Address - {{info.NetworkSettings[`${this.repositoryName}docker_default`].MacAddress}}</h4>
           </md-list-item>
         </md-list>
       </md-layout>
     </md-layout>
 
-    <md-layout md-gutter>
+    <!-- <md-layout md-gutter>
       <md-layout md-flex-xsmall="100" md-flex-small="100" md-flex-medium="50" md-align="center">
         <h4>View Logs</h4>
       </md-layout>
@@ -68,7 +68,7 @@
           </md-layout>
         </md-layout>
       </md-layout>
-    </md-layout>
+    </md-layout> -->
 
   </div>
 </template>
@@ -81,13 +81,15 @@ export default {
     info: {
       State: { Pid: 0 },
       HostConfig: { ShmSize: 0 },
-      NetworkSettings: { IPAddress: 0, MacAddress: 0 }
+      NetworkSettings: { }
     },
-    logs: ""
+		logs: "" ,
+		repositoryName : ""
   }),
   beforeMount() {},
   mounted() {
-    this.monitorContainer();
+		this.repositoryName = this.$store.getters.repositoryItem.repositoryName;
+		this.monitorContainer();
   },
   beforeDestroy() {},
   destroyed() {},
@@ -99,13 +101,13 @@ export default {
         '{"log":"Server running at http://localhost:3000\n","stream":"stdout","time":"2017-09-04T11:15:39.859242485Z"}';
     },
     monitorContainer() {
-      makeRequest("/monitorcontainer?containerName=sejal", "GET", null, null)
+      makeRequest(`/monitorcontainer?containerName=${this.repositoryName}docker_web_1`, "GET", null, null)
         .then(result => {
           let res = result.res;
           if (!result.error && res) {
             let _info = res.data[0];
             this.info = Object.assign({}, _info);
-            console.log("............................\n", this.info);
+            console.log("............................\n", _info , this.info.NetworkSettings[`${this.repositoryName}docker_default`]);
           }
         })
         .catch(reject => console.log(reject));
