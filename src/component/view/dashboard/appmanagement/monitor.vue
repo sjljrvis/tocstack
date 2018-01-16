@@ -18,10 +18,10 @@
             <h4>Shared Memory - {{info.HostConfig.ShmSize}} KB </h4>
           </md-list-item>
           <md-list-item>
-            <h4>IP Address - {{info.NetworkSettings[`${this.repositoryName}docker_default`].IPAddress}}</h4>
+            <h4>IP Address - {{info.NetworkSettings[`${this.repositoryName}docker_default`] ? info.NetworkSettings[`${this.repositoryName}docker_default`].IPAddress : 0 }}</h4>
           </md-list-item>
           <md-list-item>
-            <h4>MAC Address - {{info.NetworkSettings[`${this.repositoryName}docker_default`].MacAddress}}</h4>
+            <h4>MAC Address - {{info.NetworkSettings[`${this.repositoryName}docker_default`] ? info.NetworkSettings[`${this.repositoryName}docker_default`].MacAddress : 0}}</h4>
           </md-list-item>
         </md-list>
       </md-layout>
@@ -81,15 +81,15 @@ export default {
     info: {
       State: { Pid: 0 },
       HostConfig: { ShmSize: 0 },
-      NetworkSettings: { }
+      NetworkSettings: {}
     },
-		logs: "" ,
-		repositoryName : ""
+    logs: "",
+    repositoryName: ""
   }),
   beforeMount() {},
   mounted() {
-		this.repositoryName = this.$store.getters.repositoryItem.repositoryName;
-		this.monitorContainer();
+    this.repositoryName = this.$store.getters.repositoryItem.repositoryName;
+    this.monitorContainer();
   },
   beforeDestroy() {},
   destroyed() {},
@@ -101,13 +101,26 @@ export default {
         '{"log":"Server running at http://localhost:3000\n","stream":"stdout","time":"2017-09-04T11:15:39.859242485Z"}';
     },
     monitorContainer() {
-      makeRequest(`/monitorcontainer?containerName=${this.repositoryName}docker_web_1`, "GET", null, null)
+      makeRequest(
+        `/monitorcontainer?containerName=${this.repositoryName}docker_web_1`,
+        "GET",
+        null,
+        null
+      )
         .then(result => {
           let res = result.res;
           if (!result.error && res) {
             let _info = res.data[0];
             this.info = Object.assign({}, _info);
-            console.log("............................\n", _info , this.info.NetworkSettings[`${this.repositoryName}docker_default`]);
+            if (this.info.NetworkSettings[`${this.repositoryName}docker_default`] == undefined) {
+              this.info.NetworkSettings[
+                `${this.repositoryName}docker_default`
+              ].IPAddress = 0;
+              this.info.NetworkSettings[
+                `${this.repositoryName}docker_default`
+              ].MacAddress = 0;
+            }
+            console.log("............................\n", this.info);
           }
         })
         .catch(reject => console.log(reject));
