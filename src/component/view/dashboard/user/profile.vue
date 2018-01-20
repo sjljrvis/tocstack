@@ -42,23 +42,23 @@
 						<div>
 					     <md-input-container style="margin-left:15%;margin-right:15%;width:50%">
 									<label>Current Password</label>
-									<md-input type="password"></md-input>
+									<md-input type="password" v-model="payload.oldPassword"></md-input>
   							</md-input-container>
 						</div>
 						<div>
 					  <md-input-container style="margin-left:15%;margin-right:15%;width:50%">
 									<label>New Password</label>
-									<md-input type="password"></md-input>
+									<md-input type="password" v-model="payload.password" ></md-input>
   					</md-input-container>
 						</div>
 						<div>
 					  <md-input-container style="margin-left:15%;margin-right:15%;width:50%">
 								<label>Confirm new Password</label>
-								<md-input type="password"></md-input>
+								<md-input type="password" v-model="payload.confirmPassword"></md-input>
   					</md-input-container>
 						</div>
 						<div style="text-align:center">
-						<md-button style="background-color:#42f498;color:#ffffff;margin-left:15%;margin-right:15%;width:auto"class="md-raised md-warn">Update Password</md-button>
+						<md-button style="background-color:#42f498;color:#ffffff;margin-left:15%;margin-right:15%;width:auto" class="md-raised md-warn" @click="updatePassword">Update Password</md-button>
 						</div>
 					</md-layout>
 					</md-layout>
@@ -86,7 +86,7 @@
 		</md-card>
 		<DashboardFooter></DashboardFooter>
 		<md-snackbar :md-position="snackBar.vertical + ' ' + snackBar.horizontal" ref="snackbar" :md-duration="snackBar.duration">
-		<p style="color:#ffffff">App with this name already exists . Please choose another one</p>
+		<p style="color:#ffffff">{{snackBar.errorMessage}}</p>
 		<md-button class="md-warn" @click="$refs.snackbar.close()">close</md-button>
 	</md-snackbar>
 	</div>
@@ -100,11 +100,10 @@ import DashboardFooter from "../partial/dashboardfooter.vue";
 
 export default {
   beforeMount() {
-		this.$store.dispatch("setCurrentRoute", "/profiles");
-		if(this.$browserStore.get("userName") == null)
-		{
-			this.pushToLoginPage();
-		}
+    this.$store.dispatch("setCurrentRoute", "/profiles");
+    if (this.$browserStore.get("userName") == null) {
+      this.pushToLoginPage();
+    }
   },
   mounted() {
     this.user.userName = this.$browserStore.get("userName");
@@ -116,7 +115,10 @@ export default {
     return {
       payload: {
         repositoryName: "",
-        language: ""
+        language: "",
+        oldPassword: "",
+        password: "",
+        confirmPassword: ""
       },
       user: {
         userName: "",
@@ -131,7 +133,8 @@ export default {
       snackBar: {
         vertical: "top",
         horizontal: "center",
-        duration: 10000
+        duration: 10000,
+        errorMessage: ""
       }
     };
   },
@@ -166,6 +169,32 @@ export default {
         },
         redirect: "/login"
       });
+    },
+    updatePassword() {
+      if (this.payload.password == this.payload.confirmPassword) {
+        let _payload = {
+          userName: this.user.userName,
+          oldPassword: this.payload.oldPassword,
+          password: this.payload.password,
+          confirmPassword: this.payload.confirmPassword
+        };
+        makeRequest(`/admin/user`, "POST", null, _payload)
+          .then(result => {
+            let res = result.res;
+            if (res.data.status) {
+              this.snackBar.errorMessage = res.data.message
+              this.$refs.snackbar.open();							
+            } else {
+              this.snackBar.errorMessage = res.data.message
+              this.$refs.snackbar.open();
+            }
+          })
+          .catch(reject => console.log(reject));
+      } else {
+        this.snackBar.errorMessage =
+          "New password and confirm password did not match";
+        this.$refs.snackbar.open();
+      }
     },
     deleteUser() {
       makeRequest(`/admin/deleteuser/${this.user.userName}`, "POST", null, {})

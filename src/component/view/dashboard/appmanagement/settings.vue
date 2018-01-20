@@ -29,7 +29,7 @@
             <h5>Containername -{{payload.containerName}}</h5>
           </md-list-item>
           <md-list-item>
-            <h5>Git clone url -{{payload.path}}</h5>
+            <h5>Git clone url - http://git.tocstack.com/{{payload.repositoryName}}</h5>
           </md-list-item>
         </md-list>
       </md-layout>

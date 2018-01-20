@@ -3,53 +3,43 @@
 
     <md-layout md-gutter style="padding-top:10px">
 
-      <md-layout md-align="left" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="75" style="padding-right : 10px !important ;padding-left : 10px !important">
+      <md-layout md-align="left" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="100" md-flex-large="100" style="padding-right : 10px !important ;padding-left : 10px !important">
         <div style="background : #ffffff">
           <div style="padding : 10px 10px 10px 10px">
-            <h4>Install the Heroku CLI</h4>
-            </br>
+            <h4>Install the tocstack CLI</h4>
+            <br>
           </div>
         </div>
       </md-layout>
 
-      <md-layout md-align="left" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="25" style="background : #00162d">
-        <div style="background : #00162d">
-          <div style="padding : 10px 10px 10px 10px">
-
-           <code></code>
-            </br>
-            <code>$ heroku login</code>
-            </br>
-          </div>
+      <md-layout md-align="left" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="100"   md-flex-large="100" style="">
+        <div style="padding : 10px 10px 10px 10px">
+          <pre>$ npm install tocstack-cli -g</pre>
         </div>
+				
       </md-layout>
 
     </md-layout>
 
     <md-layout md-gutter style="padding-top:10px">
 
-      <md-layout md-align="left" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="75" style="padding-right : 10px !important ;padding-left : 10px !important">
+      <md-layout md-align="left" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="100"  md-flex-large="100" style="padding-right : 10px !important ;padding-left : 10px !important">
         <div style="background : #ffffff">
           <div style="padding : 10px 10px 10px 10px">
-            <h4>Create a new Git repository</h4>
             <h4>Initialize a git repository in a new or existing directory</h4>
-            </br>
+            <br>
           </div>
         </div>
       </md-layout>
 
-      <md-layout md-align="left" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="25" style="background : #00162d">
-        <div style="background : #00162d">
+      <md-layout md-align="left" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="100"  md-flex-large="100" style="">
+        <div style="">
           <div style="padding : 10px 10px 10px 10px">
 
-            <code></code>
-            </br>
-            <code>$ git add .</code>
-            </br>
-            <code>$ git commit -am "make it better"</code>
-            </br>
-            <code>$ git push heroku master</code>
-            </br>
+<pre>$ cd myproject
+$ git init	
+Initialized empty Git repository in /home/sejal/myproject/.git/
+</pre>
           </div>
         </div>
       </md-layout>
@@ -58,32 +48,24 @@
 
     <md-layout md-gutter style="padding-top:10px">
 
-      <md-layout md-align="left" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="75" style="padding-right : 10px !important ;padding-left : 10px !important">
+      <md-layout md-align="left" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="100"  md-flex-large="100" style="padding-right : 10px !important ;padding-left : 10px !important">
         <div style="background : #ffffff">
           <div style="padding : 10px 10px 10px 10px">
             <h4>Deploy your changes</h4>
-            <h4>Make some changes to the code you just cloned and deploy them to Heroku using Git.</h4>
-            </br>
+            <h4>Code your applications deploy them to tocstack using Git.</h4>
+            <br>
           </div>
         </div>
       </md-layout>
 
-      <md-layout md-align="left" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="25" style="background :#00162d">
-        <div style="background : #00162d">
+      <md-layout md-align="left" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="100"  md-flex-large="100" style="">
+        <div style="">
           <div style="padding : 10px 10px 10px 10px">
-
-            <code></code>
-            </br>
-            <code>$git init</code>
-            </br>
-            <code>$git add README.md</code>
-            </br>
-            <code>heroku git:remote -a node-test-app-sejal</code>
-            </br>
-            <code>$git commit -m "first commit"</code>
-            </br>
-            <code>$git push origin master</code>
-
+<pre>$ git add --all
+$ git remote add tocstack http://git.tocstack.com/{{repositoryName}}
+$ git commit -m "commit message"
+$ git push tocstack master
+</pre>
           </div>
         </div>
       </md-layout>
@@ -92,25 +74,19 @@
 
     <md-layout md-gutter style="padding-top:10px">
 
-      <md-layout md-align="left" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="75" style="padding-right : 10px !important ;padding-left : 10px !important">
+      <md-layout md-align="left" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="100"  md-flex-large="100" style="padding-right : 10px !important ;padding-left : 10px !important">
         <div style="background : #ffffff">
           <div style="padding : 10px 10px 10px 10px">
-            <h4>Existing Git repository</h4>
-            <h4>For existing repositories, simply add the heroku remote</h4>
-            </br>
+            <h4>Clone a Git repository</h4>
           </div>
         </div>
       </md-layout>
 
-      <md-layout md-align="left" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="25" style="background : #00162d">
-        <div style="background : #00162d">
+      <md-layout md-align="left" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="100"  md-flex-large="100" style="">
+        <div style="">
           <div style="padding : 10px 10px 10px 10px">
-
-            <code></code>
-            </br>
-            <code>$ heroku git:remote -a node-test-app-sejal</code>
-            </br>
-
+<pre>$ git clone http://git.tocstack.com/{{repositoryName}}
+</pre>
           </div>
         </div>
       </md-layout>
@@ -124,25 +100,17 @@
 <script>
 export default {
   data: () => ({
-
-  }),
-  beforeMount() {
-
-  },
+		repositoryName : ""
+	}),
+  beforeMount() {},
   mounted() {
-  },
-  beforeDestroy() {
-  },
-  destroyed() {
-  },
-  components: {
-  },
-  computed: {
-  },
-  methods: {
-
-  }
-}
+		 this.repositoryName = this.$store.getters.repositoryItem.repositoryName;
+	},
+  destroyed() {},
+  components: {},
+  computed: {},
+  methods: {}
+};
 </script>
 <style>
 
