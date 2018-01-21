@@ -35,6 +35,7 @@
       </md-layout>
     </md-layout>
   
+	<!-- LOOK AFTER THIS ISSUE ITS NEEDED
     <md-layout md-gutter>
 
       <md-layout md-flex-xsmall="100" md-flex-small="100" md-flex-medium="50" md-vertical-align="center" md-align="center">
@@ -45,7 +46,7 @@
       </md-layout>
 
     </md-layout>
-   
+   -->
     <md-layout md-gutter>
 
       <md-layout md-flex-xsmall="100" md-flex-small="100" md-flex-medium="50" md-vertical-align="center" md-align="center">

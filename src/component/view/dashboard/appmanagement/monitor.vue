@@ -8,20 +8,20 @@
 
         <md-list>
           <md-list-item>
-            <h4 v-if="info.State && info.State.Running">Running </h4>
-            <h4 v-else> Stopped </h4>
+            <h4 style = "font-size:17px !important" v-if="info.State && info.State.Running">Running </h4>
+            <h4 style = "font-size:17px !important" v-else> Stopped </h4>
           </md-list-item>
           <md-list-item>
-            <h4>Process Id - {{info.State.Pid}}</h4>
+            <h4 style = "font-size:17px !important"> Process Id - {{info.State.Pid}}</h4>
           </md-list-item>
           <md-list-item>
-            <h4>Shared Memory - {{info.HostConfig.ShmSize}} KB </h4>
+            <h4 style = "font-size:17px !important" >Shared Memory - {{info.HostConfig.ShmSize}} KB </h4>
           </md-list-item>
           <md-list-item>
-            <h4>IP Address - {{info.NetworkSettings[`${this.repositoryName}docker_default`] ? info.NetworkSettings[`${this.repositoryName}docker_default`].IPAddress : 0 }}</h4>
+            <h4 style = "font-size:17px !important" >IP Address - {{info.NetworkSettings[`${this.repositoryName}docker_default`] ? info.NetworkSettings[`${this.repositoryName}docker_default`].IPAddress : 0 }}</h4>
           </md-list-item>
           <md-list-item>
-            <h4>MAC Address - {{info.NetworkSettings[`${this.repositoryName}docker_default`] ? info.NetworkSettings[`${this.repositoryName}docker_default`].MacAddress : 0}}</h4>
+            <h4 style = "font-size:17px !important" >MAC Address - {{info.NetworkSettings[`${this.repositoryName}docker_default`] ? info.NetworkSettings[`${this.repositoryName}docker_default`].MacAddress : 0}}</h4>
           </md-list-item>
         </md-list>
       </md-layout>
