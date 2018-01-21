@@ -342,5 +342,27 @@ pre {
   color: #596981;
   background-color: #f5f7fa;
 }
+.code {
+	font-family: monospace;
+  word-wrap: normal;
+  word-break: normal;
+  display: block;
+  padding: 9.5px;
+  margin: 0 0 10px;
+  font-size: 13px;
+  line-height: 1.42857;
+  border: 1px solid #eef1f6;
+  border-radius: 4px;
+  color: #596981;
+  background-color: #f5f7fa;
+}
+@media only screen and (max-width: 500px) {
+    .code {
+        overflow-x: scroll; 
+    }
+		.parent-code{
+			width: 300px
+		}
+}
 </style>
 

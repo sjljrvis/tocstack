@@ -13,8 +13,10 @@
       </md-layout>
 
       <md-layout md-align="left" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="100"   md-flex-large="100" style="">
-        <div style="padding : 10px 10px 10px 10px">
-          <pre>$ npm install tocstack-cli -g</pre>
+        <div class = "parent-code" style="padding : 10px 10px 10px 10px">
+					<div class = "code">
+          $ npm install tocstack-cli -g
+					</div>
         </div>
 				
       </md-layout>
@@ -34,12 +36,12 @@
 
       <md-layout md-align="left" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="100"  md-flex-large="100" style="">
         <div style="">
-          <div style="padding : 10px 10px 10px 10px">
-
-<pre>$ cd myproject
-$ git init	
-Initialized empty Git repository in /home/sejal/myproject/.git/
-</pre>
+          <div class = "parent-code" style="padding : 10px 10px 10px 10px">
+<div class = "code">
+$ cd myproject<br>
+$ git init<br>	
+Initialized empty Git repository in /home/sejal/myproject/.git/<br>
+</div>
           </div>
         </div>
       </md-layout>
@@ -60,12 +62,13 @@ Initialized empty Git repository in /home/sejal/myproject/.git/
 
       <md-layout md-align="left" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="100"  md-flex-large="100" style="">
         <div style="">
-          <div style="padding : 10px 10px 10px 10px">
-<pre>$ git add --all
-$ git remote add tocstack http://git.tocstack.com/{{repositoryName}}
-$ git commit -m "commit message"
-$ git push tocstack master
-</pre>
+          <div class = "parent-code" style="padding : 10px 10px 10px 10px;">
+<div class = "code">
+$ git add --all <br>
+$ git remote add tocstack http://git.tocstack.com/{{repositoryName}}<br>
+$ git commit -m "commit message"<br>
+$ git push tocstack master<br>
+</div>
           </div>
         </div>
       </md-layout>
@@ -84,9 +87,10 @@ $ git push tocstack master
 
       <md-layout md-align="left" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="100"  md-flex-large="100" style="">
         <div style="">
-          <div style="padding : 10px 10px 10px 10px">
-<pre>$ git clone http://git.tocstack.com/{{repositoryName}}
-</pre>
+          <div class = "parent-code" style="padding : 10px 10px 10px 10px">
+<div class = "code">						
+$ git clone http://git.tocstack.com/{{repositoryName}}
+</div>
           </div>
         </div>
       </md-layout>
