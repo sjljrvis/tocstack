@@ -15,7 +15,7 @@
       <md-layout md-align="left" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="100"   md-flex-large="100" style="">
         <div class = "parent-code" style="padding : 10px 10px 10px 10px">
 					<div class = "code">
-          $ npm install tocstack-cli -g
+          $ sudo npm install tocstack-cli -g --unsafe-perm=true
 					</div>
         </div>
 				
