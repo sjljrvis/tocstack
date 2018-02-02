@@ -22,7 +22,7 @@
 						<form style="width:300px">
 							<md-input-container>
 								<md-icon>person</md-icon>
-								<label>Username</label>
+								<label>Email</label>
 								<md-input type="text" v-model="payload.email" ref="username"></md-input>
 							</md-input-container>
 
