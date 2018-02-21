@@ -76,7 +76,7 @@
 					<md-layout md-align="center" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="80" md-flex-large="80" md-vertical-align="start">
 					<md-layout md-column>
 						<div style="text-align:center">
-						<md-button style="background-color:#ff0000;color:#ffffff;margin-left:15%;margin-right:15%;width:auto"class="md-raised " @click="deleteUser">Delete account</md-button>
+						<md-button style="background-color:#ff0000;color:#ffffff;margin-left:15%;margin-right:15%;width:auto" class="md-raised " @click="deleteUser">Delete account</md-button>
 						</div>
 					</md-layout>
 					</md-layout>

@@ -37,8 +37,8 @@
 									<span>Profile &nbsp;&nbsp;</span>
 								</md-menu-item>
 								<md-menu-item @click="pushToPage('devdashboard')">
-									<md-icon>settings</md-icon>
-									<span>Settings &nbsp;&nbsp;</span>
+									<md-icon>home</md-icon>
+									<span>Home &nbsp;&nbsp;</span>
 								</md-menu-item>
 								<md-menu-item @click="logoutUser">
 									<md-icon>subdirectory_arrow_right</md-icon>
