@@ -30,6 +30,27 @@
 					<br><hr><br>
 
 				<md-layout md-gutter>
+						<md-layout md-align="center" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="20" md-flex-large="20" md-vertical-align="center">
+							<md-layout md-column>
+							<h4 style="text-align:center"><strong>S3 - Token</strong></h4>
+							<h4 style="font-size:14px !important;text-align:center">S3 token is refereshed everytime you update password , Kindly note it once generated</h4>
+						</md-layout>
+						</md-layout>
+
+					<md-layout md-align="center" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="80" md-flex-large="80" md-vertical-align="center">
+						<md-layout md-column>
+							<div v-if = "s3Token.length > 0" >
+							<h5 style="text-align:center;"><strong>{{s3Token}}</strong></h5>	
+							</div>
+							<div style="text-align:center">
+							<md-button style="background-color:#f4511e;color:#ffffff;margin-left:15%;margin-right:15%;width:auto" class="md-raised " @click="showToken">Generate</md-button>	
+							</div>
+						</md-layout>
+					</md-layout>
+				</md-layout>	
+					<br><hr><br>
+
+				<md-layout md-gutter>
 					<md-layout md-align="center" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="20" md-flex-large="20" md-vertical-align="">
 						<md-layout md-column>
 						<h4 style="text-align:center"><strong>Passwords</strong></h4>
@@ -120,6 +141,7 @@ export default {
         password: "",
         confirmPassword: ""
       },
+      s3Token: "",
       user: {
         userName: "",
         userEmail: ""
@@ -182,10 +204,10 @@ export default {
           .then(result => {
             let res = result.res;
             if (res.data.status) {
-              this.snackBar.errorMessage = res.data.message
-              this.$refs.snackbar.open();							
+              this.snackBar.errorMessage = res.data.message;
+              this.$refs.snackbar.open();
             } else {
-              this.snackBar.errorMessage = res.data.message
+              this.snackBar.errorMessage = res.data.message;
               this.$refs.snackbar.open();
             }
           })
@@ -207,6 +229,19 @@ export default {
             this.$browserStore.remove("userEmail");
             this.$browserStore.remove("userName");
             this.logoutUser();
+          }
+        })
+        .catch(reject => console.log(reject));
+    },
+    showToken() {
+      makeRequest(`/admin/generatetoken`, "POST", null, {})
+        .then(result => {
+          let res = result.res;
+          if (res.data.status == true) {
+            this.s3Token = res.data.s3Token;
+            console.log("Status", res.data);
+          } else {
+            this.s3Token = res.data.message;
           }
         })
         .catch(reject => console.log(reject));
