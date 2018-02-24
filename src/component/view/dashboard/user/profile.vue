@@ -27,7 +27,7 @@
 					</md-layout>
 					</md-layout>
 				</md-layout>	
-					<br><hr><br>
+					<br><hr style="width:90%"><br>
 
 				<md-layout md-gutter>
 						<md-layout md-align="center" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="20" md-flex-large="20" md-vertical-align="center">
@@ -38,17 +38,22 @@
 						</md-layout>
 
 					<md-layout md-align="center" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="80" md-flex-large="80" md-vertical-align="center">
-						<md-layout md-column>
-							<div v-if = "s3Token.length > 0" >
-							<h5 style="text-align:center;"><strong>{{s3Token}}</strong></h5>	
-							</div>
-							<div style="text-align:center">
-							<md-button style="background-color:#f4511e;color:#ffffff;margin-left:15%;margin-right:15%;width:auto" class="md-raised " @click="showToken">Generate</md-button>	
-							</div>
+						<md-layout md-column>	
+									<md-layout  v-if = "s3Token.length > 0"  md-row md-align="center">
+												<div>
+													<h5 style="text-align:center;"><strong>{{s3Token}}</strong></h5>	
+												</div>
+												<div style="text-align:center">
+													<md-button style="background-color:#f4511e;color:#ffffff;margin-left:15%;margin-right:15%;width:auto" class="md-raised " @click=" generateToken">Generate</md-button>	
+												</div>					
+									</md-layout>		  
+												<div style="text-align:center">
+													<md-button style="background-color:#f4511e;color:#ffffff;margin-left:15%;margin-right:15%;width:auto" class="md-raised " @click="showToken">show</md-button>	
+												</div>
 						</md-layout>
 					</md-layout>
 				</md-layout>	
-					<br><hr><br>
+					<br><hr style="width:90%"><br>
 
 				<md-layout md-gutter>
 					<md-layout md-align="center" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="20" md-flex-large="20" md-vertical-align="">
@@ -84,13 +89,13 @@
 					</md-layout>
 					</md-layout>
 				</md-layout>
-			<br><hr><br>
+			<br><hr style="width:90%"><br>
 
 				<md-layout md-gutter>
 					<md-layout md-align="center" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="20" md-flex-large="20" md-vertical-align="">
 						<md-layout md-column>
 						<h4 style="text-align:center"><strong>Delete your account</strong></h4>
-						<h4 style="color:#ff0000 !important;font-size:14px !important;text-align:center"><strong>Warning </strong>Deleting your account is irrevesible</h4>
+						<h4 style="color:#ff0000 !important;font-size:14px !important;text-align:center"><strong>Warning !</strong> Deleting your account is irrevesible</h4>
 					</md-layout>
 					</md-layout>
 
@@ -234,7 +239,7 @@ export default {
         .catch(reject => console.log(reject));
     },
     showToken() {
-      makeRequest(`/admin/generatetoken`, "POST", null, {})
+      makeRequest(`/admin/showtoken`, "POST", null, {})
         .then(result => {
           let res = result.res;
           if (res.data.status == true) {
@@ -242,6 +247,21 @@ export default {
             console.log("Status", res.data);
           } else {
             this.s3Token = res.data.message;
+          }
+        })
+        .catch(reject => console.log(reject));
+    },
+    generateToken() {
+      makeRequest(`/admin/generatetoken`, "POST", null, {})
+        .then(result => {
+          let res = result.res;
+          if (res.data.status == true) {
+            this.s3Token = res.data.s3Token;
+            this.snackBar.errorMessage = res.data.message;
+            this.$refs.snackbar.open();
+          } else {
+            this.snackBar.errorMessage = res.data.message;
+            this.$refs.snackbar.open();
           }
         })
         .catch(reject => console.log(reject));
