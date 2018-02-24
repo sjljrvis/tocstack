@@ -54,7 +54,7 @@
 			</md-layout>	
 		</div>
 	<md-snackbar :md-position="snackBar.vertical + ' ' + snackBar.horizontal" ref="snackbar" :md-duration="snackBar.duration">
-		<p style="color:#ffffff">App with this name already exists . Please choose another one</p>
+		<p style="color:#ffffff">{{snackBar.message}}</p>
 		<md-button class="md-warn" @click="$refs.snackbar.close()">close</md-button>
 	</md-snackbar>
 
@@ -96,7 +96,8 @@ export default {
       snackBar: {
         vertical: "top",
         horizontal: "right",
-        duration: 5000
+        duration: 5000,
+        message: ""
       }
     };
   },
@@ -121,11 +122,12 @@ export default {
     register() {
       const { name, userName, email, password } = this.payload;
       const registerPayload = { name, userName, email, password };
-      makeRequest("/admin/user", "PUT", null,registerPayload)
+      makeRequest("/admin/user", "PUT", null, registerPayload)
         .then(result => {
           let res = result.res;
           console.log("Status", res.data.status);
           if (res.data.status != "true") {
+            this.snackBar.message = res.data.message;
             this.$refs.snackbar.open();
           } else {
             this.pushToLoginPage();
