@@ -7,14 +7,14 @@
 				<md-layout md-gutter>
 					<md-layout md-column>
 							<div style="text-align:center">
-								<img style="width:250px;height:250px;border-radius:50%"src="../../../assets/sejal2.jpg" alt="Sejal">
+								<img style="width:250px;height:250px;border-radius:50%" src="../../../assets/sejal2.jpg" alt="Sejal">
 							</div>
 							<h1 style="text-align:center">Sejal Chougule</h1>
 							<p style="text-align:center;margin-top: -30px;margin-bottom:30px;color:#ff5722">Creator/Founder</p>
 							<div style="display:flex;flex-direction:row;justify-content:center">
-								<img style="width:50px;height:50px;border-radius:50%"src="../../../assets/github.png" alt="Sejal">
-								<img style="width:50px;height:50px;border-radius:50%"src="../../../assets/linkedin.png" alt="Sejal">
-								<img style="width:50px;height:50px;border-radius:50%"src="../../../assets/facebook.png" alt="Sejal">
+								<img style="width:50px;height:50px;border-radius:50%" src="../../../assets/github.png" alt="Sejal">
+								<img style="width:50px;height:50px;border-radius:50%" src="../../../assets/linkedin.png" alt="Sejal">
+								<img style="width:50px;height:50px;border-radius:50%" src="../../../assets/facebook.png" alt="Sejal">
 								
 							</div>
 							<div style="text-align:center">
@@ -24,9 +24,9 @@
 									deploy apps/web-services rapidly using <span style="color:#ff5722">git</span>.
 									
 									<br><br>If you have found my software/code being of any use to you, you can always contribute/help to improve fuctionality of platform.
-									You can always look up my portfolio at <a style="color:#4286f4"href="http://sejalchougule.me">sejalchougule.me</a>
+									You can always look up my portfolio at <a style="color:#4286f4" href="http://sejalchougule.me">sejalchougule.me</a>
 
-									<br>Wish to discuss something??? Give me a shout at <a href="mailto:sjlchougule@gmail.com"style="color:#4286f4">sjlchougule@gmail</a>
+									<br>Wish to discuss something??? Give me a shout at <a href="mailto:sjlchougule@gmail.com" style="color:#4286f4">sjlchougule@gmail</a>
 
 								</p>	
 							</div>	
