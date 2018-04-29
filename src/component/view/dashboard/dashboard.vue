@@ -80,7 +80,7 @@
 						<md-layout md-gutter>
 							<md-layout  md-flex-xsmall="100" md-flex-small="100" md-flex-medium="100" md-flex-large="60" md-vertical-align="center">
 								<!-- <img src="https://hasura.io/rstatic/resources/hasura_ninga3.png"> -->
-								<img style="box-shadow: 1px 2px 23px 3px rgba(0,0,0,0.75);" src='../../../assets/demo1.png'></img>
+								<img style="box-shadow: 1px 2px 23px 3px rgba(0,0,0,0.75);" src='../../../assets/demo1.png'>
 							</md-layout>
 							<md-layout class="twitter-card" md-align="center" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="100" md-flex-large="40" md-vertical-align="center">
 								<h2>Add new app</h2>
@@ -96,7 +96,7 @@
 			<div style="padding: 10% 1%;">
 				<md-layout md-gutter>
 					<md-layout md-flex-xsmall="100" md-flex-small="100" md-flex-medium="100" md-flex-large="60" md-vertical-align="center">
-						<img  style="box-shadow: 2px 0px 25px 10px rgba(0,0,0,0.75);" src='../../../assets/demo2.png'></img>
+						<img  style="box-shadow: 2px 0px 25px 10px rgba(0,0,0,0.75);" src='../../../assets/demo2.png'>
 						<!-- https://hasura.io/rstatic/dist/09d9be2c190557c1dbf736dde688c99f.png -->
 					</md-layout>
 
@@ -113,7 +113,7 @@
 			<div style="padding: 10% 1%;">
 				<md-layout md-gutter>
 					<md-layout md-flex-xsmall="100" md-flex-small="100" md-flex-medium="100" md-flex-large="60" md-vertical-align="center">
-						<img style="box-shadow: 2px 0px 25px 10px  rgba(0,0,0,0.75);" src='../../../assets/demo3.png'></img>
+						<img style="box-shadow: 2px 0px 25px 10px  rgba(0,0,0,0.75);" src='../../../assets/demo3.png'>
 						<!-- <img class='code-snippet' src='../../../assets/code1.png'></img> -->
 					</md-layout>
 
@@ -161,7 +161,7 @@
 					</md-layout>
 
 					<md-layout md-flex-xsmall="100" md-flex-small="100" md-flex-medium="100" md-flex-large="60" md-vertical-align="center">
-						<img style="box-shadow: 2px 0px 25px 10px  rgba(0,0,0,0.75);" src='../../../assets/cli1.png'></img>
+						<img style="box-shadow: 2px 0px 25px 10px  rgba(0,0,0,0.75);" src='../../../assets/cli1.png'>
 						<!-- <img class='code-snippet' src='../../../assets/code1.png'></img> -->
 					</md-layout>
 
@@ -183,7 +183,7 @@
 					</md-layout>
 
 					<md-layout md-flex-xsmall="100" md-flex-small="100" md-flex-medium="100" md-flex-large="60" md-vertical-align="center">
-						<img style="box-shadow: 2px 0px 25px 10px  rgba(0,0,0,0.75);" src='../../../assets/cli2.png'></img>
+						<img style="box-shadow: 2px 0px 25px 10px  rgba(0,0,0,0.75);" src='../../../assets/cli2.png'>
 					</md-layout>
 
 
@@ -208,7 +208,7 @@
 					</md-layout>
 
 					<md-layout md-align="center" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="100" md-flex-large="60" md-vertical-align="center">
-						<img src='../../../assets/opensource.png'></img>
+						<img src='../../../assets/opensource.png'>
 						<!-- <img class='code-snippet' src='../../../assets/code1.png'></img> -->
 					</md-layout>
 
@@ -258,76 +258,30 @@
 			</div>
 		</div>
 
-		<div style='background-color : #FFFFFF ;'>
-			<div style='padding : 10px 10px 10px 10px'>
+		<div style='background-color : #ffffff;'>
+			<div style='padding : 0px 0px 0px 0px'>
 				<h2>tocstack</h2>
 				<h3 style = "text-align:center">
 					<span>Blogs</span>
 					<span>#tweets</span>
 				</h3>
 				<md-layout md-gutter>
-
-					<md-layout class="twitter-card" md-align="center" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="50">
-						<md-layout md-column>
-							<md-card style="height:fit-content">
-								<md-card-header>
-									<md-avatar style='margin-left:0px'>
-										<img src="../../../assets/space.jpg" alt="Avatar">
-									</md-avatar>
-									<md-card-header-text>
-										<div class="md-title">Title goes here</div>
-										<div class="md-subhead"> antium quasi non,. Excepturi. consectetur adipisicing elit. Optio itaque ea, nostrum odio. Dolores, sed accusantium quasi non, voluptas eius illo quas, saepe voluptate pariatur in deleniti minus sint
-										</div>
-
-									</md-card-header-text>
-								</md-card-header>
-							</md-card>
-							<md-card style="height:fit-content">
-								<md-card-header>
-									<md-avatar style='margin-left:0px'>
-										<img src="../../../assets/space.jpg" alt="Avatar">
-									</md-avatar>
-									<md-card-header-text>
-										<div class="md-title">Title goes here</div>
-										<div class="md-subhead"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio itaque ea, nostrum odio. Dolores, sed accusantium quasi non, voluptas eius illo quas, saepe voluptate pariatur in deleniti minus sint. Excepturi.
-										</div>
-
-									</md-card-header-text>
-								</md-card-header>
-							</md-card>
-						</md-layout>
-					</md-layout>
-
-					<md-layout class="twitter-card" md-align="center" md-flex-xsmall="100" md-flex-small="100" md-flex-medium="50">
-						<md-layout md-column>
-							<md-card style="height:fit-content">
-								<md-card-header>
-									<md-avatar style='margin-left:0px'>
-										<img src="../../../assets/space.jpg" alt="Avatar">
-									</md-avatar>
-									<md-card-header-text>
-										<div class="md-title">Title goes here</div>
-										<div class="md-subhead"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio itaque ea, nostrum odio. Dolores, sed accusantium quasi non, voluptas eius illo quas, saepe voluptate pariatur in deleniti minus sint. Excepturi.
-										</div>
-
-									</md-card-header-text>
-								</md-card-header>
-							</md-card>
-							<md-card style="height:fit-content">
-								<md-card-header>
-									<md-avatar style='margin-left:0px'>
-										<img src="../../../assets/space.jpg" alt="Avatar">
-									</md-avatar>
-									<md-card-header-text>
-										<div class="md-title">Title goes here</div>
-										<div class="md-subhead"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio itaque ea, nostrum odio. Dolores, sed accusantium quasi non, voluptas eius illo quas, saepe voluptate pariatur in deleniti minus sint. Excepturi.
-										</div>
-
-									</md-card-header-text>
-								</md-card-header>
-							</md-card>
-						</md-layout>
-					</md-layout>
+					<md-boards class="md-transparent" :md-controls="true"  style='background-color :#F0EFF5'>
+						<md-board id="slide1" style='background-color : #ffffff ;'>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt dolorum quas amet cum vitae, omnis! Illum quas voluptatem, expedita iste, dicta ipsum ea veniam dolore in, quod saepe reiciendis nihil.</p>
+						</md-board>
+						<md-board id="slide2" style='background-color : #ffffff ;'>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt dolorum quas amet cum vitae, Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt dolorum quas amet cum vitae, o
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt dolorum quas amet cum vitae, o
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt dolorum quas amet cum vitae, oomnis! Illum quas voluptatem, expedita iste, dicta ipsum ea veniam dolore in, quod saepe reiciendis nihil.</p>
+						</md-board>
+						<md-board id="slide3" style='background-color : #ffffff ;'>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt dolorum quas amet cum vitae, omnis! Illum quas voluptatem, expedita iste, dicta ipsum ea veniam dolore in, quod saepe reiciendis nihil.</p>
+						</md-board>
+						<md-board id="slide4" style='background-color : #ffffff ;'>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt dolorum quas amet cum vitae, omnis! Illum quas voluptatem, expedita iste, dicta ipsum ea veniam dolore in, quod saepe reiciendis nihil.</p>
+						</md-board>
+					</md-boards>
 				</md-layout>
 
 			</div>
