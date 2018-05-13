@@ -2,10 +2,6 @@
   <div>
 
     <h4>Add configuration File</h4>
-    <!-- <md-input-container>
-      <label>File</label>
-      <md-file v-model="single"></md-file><md-button class="md-raised md-primary">Upload</md-button>
-    </md-input-container> -->
     <h4>Sample Configuration file</h4>
     <h4>Config.js
     </h4>

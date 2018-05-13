@@ -13,7 +13,7 @@
 					</h3>
 				</md-layout>
 
-				<md-layout md-align = "end">
+				<md-layout md-align ="end" >
           	<md-button style="height:10px;!important;margin-top:30px"class="md-raised md-warn" @click="pushToPage('login')">Login</md-button>
 				</md-layout>
         
